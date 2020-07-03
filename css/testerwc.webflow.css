@@ -1,0 +1,103 @@
+.container {
+  background-color: #fff;
+  color: #4aa3d6;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.text-span {
+  font-family: 'Changa One', Impact, sans-serif;
+  text-transform: capitalize;
+}
+
+.header-menu {
+  position: relative;
+  left: -10px;
+  top: 26px;
+  bottom: 32px;
+  display: inline;
+  overflow: visible;
+  margin-right: 3px;
+  margin-left: 65px;
+  padding-right: 13px;
+  padding-left: 21px;
+  clear: none;
+  border: 1px none #000;
+  border-radius: 16px;
+  background-color: transparent;
+  font-family: 'Changa One', Impact, sans-serif;
+  color: #382299;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: underline;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.hero-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+  max-height: 780px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(44, 230, 208, 0.74);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 118, 235, 0.34)), to(rgba(50, 118, 235, 0.34))), url('../images/animated-water-cooler-and-ppl.jpg');
+  background-image: linear-gradient(180deg, rgba(50, 118, 235, 0.34), rgba(50, 118, 235, 0.34)), url('../images/animated-water-cooler-and-ppl.jpg');
+  background-position: 0px 0px, 50% 50%;
+  color: #fff;
+  font-size: 18px;
+}
+
+.centered-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.text-span-2 {
+  text-shadow: 1px 1px 6px #000;
+}
+
+.paragraph {
+  font-family: Lato, sans-serif;
+  color: #382299;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #000;
+  white-space: normal;
+}
+
+.heading {
+  font-family: Exo, sans-serif;
+}
+
+.button {
+  border-radius: 11px;
+  box-shadow: 3px 3px 6px 0 #000;
+  font-family: Exo, sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-overlay {
+    padding: 40px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .centered-container {
+    text-align: left;
+  }
+}
