@@ -90,6 +90,212 @@
   font-family: Exo, sans-serif;
 }
 
+.form {
+  margin-top: 160px;
+  margin-right: 285px;
+  margin-left: 364px;
+  padding-bottom: 4px;
+  font-family: Exo, sans-serif;
+  color: #382299;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.submit-button {
+  margin-left: 166px;
+  padding-left: 19px;
+  float: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0 #000;
+  text-align: center;
+}
+
+.form-block {
+  margin-top: 15px;
+  margin-bottom: 24px;
+  padding-top: 0px;
+  padding-bottom: 36px;
+  background-color: transparent;
+  background-image: url('../images/animated-water-cooler-and-ppl.jpg');
+  background-position: 0px 0px;
+}
+
+.text-field {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #18a59e;
+}
+
+.text-field-2 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #18a59e;
+}
+
+.field-label {
+  color: #3108e7;
+  font-size: 18px;
+}
+
+.field-label-2 {
+  font-size: 18px;
+}
+
+.body {
+  background-color: #4aa3d6;
+  background-image: url('../images/WCLogoPNG.png');
+  background-position: 0px 0px;
+}
+
+.navbar {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #8789eb));
+  background-image: linear-gradient(180deg, #fff, #8789eb 50%);
+}
+
+.section {
+  margin-right: 4px;
+  margin-left: 98px;
+  border-radius: 13px;
+  background-color: #fff;
+  font-family: Exo, sans-serif;
+  text-align: center;
+}
+
+.body-2 {
+  margin-top: 9px;
+  padding-top: 7px;
+  padding-right: 142px;
+  padding-left: 127px;
+  background-color: #3108e7;
+  background-image: url('../images/WCLogoPNG.png');
+  background-position: 0px 0px;
+}
+
+.text-span-3 {
+  color: #f3f6f7;
+  font-size: 18px;
+}
+
+.field-label-3 {
+  color: #f3f6f7;
+  font-size: 18px;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.text-field-3 {
+  padding-left: 0px;
+}
+
+.field-label-4 {
+  text-shadow: 1px 1px 6px #000;
+}
+
+.form-2 {
+  margin-top: 80px;
+  margin-left: 83px;
+  padding-right: 165px;
+  padding-left: 175px;
+}
+
+.submit-button-2 {
+  margin-top: 27px;
+  margin-left: 154px;
+  border-radius: 9px;
+  font-weight: 700;
+  text-shadow: 1px 1px 6px #000;
+  white-space: normal;
+}
+
+.heading-2 {
+  margin-left: -3px;
+  padding-left: 0px;
+}
+
+.columns {
+  margin-top: 1px;
+  margin-bottom: -17px;
+  margin-left: -39px;
+  background-color: #d9faff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #fff), to(#088ee7));
+  background-image: linear-gradient(180deg, #fff 30%, #088ee7);
+}
+
+.image {
+  margin-left: 23px;
+}
+
+.heading-3 {
+  margin-top: 16px;
+  margin-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+  padding-left: 6px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #18a59e;
+  border-radius: 20px;
+  background-color: #f3f6f7;
+  font-family: Exo, sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.image-2 {
+  margin-top: 14px;
+}
+
+.image-3 {
+  margin-bottom: -8px;
+  margin-left: 18px;
+  padding-top: 6px;
+  padding-bottom: 0px;
+}
+
+.container-2 {
+  margin-top: -781px;
+  margin-bottom: -185px;
+  padding: 0px 0px 0px 193px;
+}
+
+.heading-4 {
+  display: inline-block;
+  margin-left: 535px;
+  padding-left: 0px;
+  clear: none;
+  font-family: Exo, sans-serif;
+  text-align: left;
+}
+
+.div-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 78px;
+  margin-left: -5px;
+  padding-top: 57px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.image-4 {
+  max-width: 25%;
+  margin-top: -58px;
+  margin-bottom: 10px;
+  margin-left: 420px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0 #000;
+}
+
 @media screen and (max-width: 767px) {
   .hero-overlay {
     padding: 40px 20px;

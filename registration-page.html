@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Sat Jul 04 2020 18:38:47 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="5efe814b16929875ac2e8d74" data-wf-site="5efe814b169298817e2e8d73">
+<html data-wf-page="5effe38e3eab879b56802950" data-wf-site="5efe814b169298817e2e8d73">
 <head>
   <meta charset="utf-8">
-  <title>TesterWC</title>
+  <title>Registration Page</title>
+  <meta content="Registration Page" property="og:title">
+  <meta content="Registration Page" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -17,22 +19,20 @@
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
-<body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
-    <div class="container w-container"><a href="#" class="w-nav-brand"><img src="images/WCLogoPNG.png" width="85" alt=""></a>
-      <nav role="navigation" class="w-nav-menu"><a href="#" class="header-menu w-nav-link"><span class="text-span">About WC</span></a><a href="#" class="header-menu w-nav-link">Features</a><a href="#" class="header-menu w-nav-link">Pricing</a><a href="login-screen.html" class="header-menu w-nav-link">LOGIN</a></nav>
-      <div class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
+<body class="body-2">
+  <div class="section">
+    <h1 class="heading-2">Registration Request</h1>
+    <h3>Please submit your name and email address to receive a registration request form</h3>
+  </div>
+  <div class="w-form">
+    <form id="email-form" name="email-form" data-name="Email Form" class="form-2"><label for="name" class="field-label-4"><span class="text-span-3">Name</span></label><input type="text" class="text-field-3 w-input" maxlength="256" name="name" data-name="Name" placeholder="" id="name"><label for="email" class="field-label-3">Email Address</label><input type="email" class="w-input" maxlength="256" name="email" data-name="Email" placeholder="" id="email" required=""><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button-2 w-button"></form>
+    <div class="w-form-done">
+      <div>Thank you! Your submission has been received!</div>
+    </div>
+    <div class="w-form-fail">
+      <div>Oops! Something went wrong while submitting the form.</div>
     </div>
   </div>
-  <header id="hero-overlay" class="hero-overlay">
-    <div class="centered-container w-container">
-      <h1 class="heading"><span class="text-span-2">Welcome to the Water Cooler Space</span></h1>
-      <p class="paragraph">This is a new and unique way to engage your working community and improve productivity while working from home!<br>‍<br>Check-In. Collaborate. Take A Break!</p>
-      <div><a href="registration-page.html" class="button w-button">Register</a></div>
-    </div>
-  </header>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5efe814b169298817e2e8d73" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
