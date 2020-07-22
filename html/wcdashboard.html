@@ -818,6 +818,131 @@
 		color: rgba(77,79,92,1);
 		text-transform: capitalize;
 	}
+
+	/* TODO css */
+	/* Include the padding and border in an element's total width and height */
+	/* Remove margins and padding from the list */
+	#todoHeader {
+		position: absolute;
+		width: 722px;
+		height: 100px;
+		left: 429px;
+		top: 600px;
+		background-color: #f44336;
+  	padding: 30px 40px;
+  	color: white;
+  	text-align: center;
+	}
+
+	/* Clear floats after the header */
+	#todoHeader:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+	}
+
+	#todo{
+		position: absolute;
+		width: 772px;
+		height: 534px;
+		left: 429px;
+		top: 700px;
+		overflow: visible;
+	}
+
+	/* Style the list items */
+
+	#todo li {
+  	cursor: pointer;
+  	position: relative;
+  	padding: 12px 8px 12px 40px;
+  	background: #eee;
+  	font-size: 18px;
+  	transition: 0.2s;
+
+  	/* make the list items unselectable */
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+	}
+
+/*
+/* Set all odd list items to a different color (zebra-stripes)
+	#todo li:nth-child(odd) {
+  	background: #f9f9f9;
+	} */
+
+	/* Darker background-color on hover */
+	#todo li:hover {
+  	background: #ddd;
+	}
+
+/* When clicked on, add a background color and strike out text */
+	#todo li.checked {
+  	background: #888;
+  	color: #fff;
+  	text-decoration: line-through;
+	}
+
+	/* Add a "checked" mark when clicked on */
+	#todo li.checked::before {
+  	content: '';
+  	position: absolute;
+  	border-color: #fff;
+  	border-style: solid;
+  	border-width: 0 2px 2px 0;
+  	top: 10px;
+  	left: 16px;
+  	transform: rotate(45deg);
+  	height: 15px;
+  	width: 7px;
+	}
+
+	/* Style the close button */
+	.close {
+  	position: absolute;
+  	right: 0;
+  	top: 0;
+  	padding: 12px 16px 12px 16px;
+	}
+
+	.close:hover {
+  	background-color: #f44336;
+  	color: white;
+	}
+
+
+	/* Style the input */
+	input {
+  	margin: 0;
+  	border: none;
+  	border-radius: 0;
+  	width: 75%;
+  	padding: 10px;
+  	float: left;
+  	font-size: 16px;
+	}
+
+/* Style the "Add" button */
+	.addBtn {
+  	padding: 10px;
+  	width: 25%;
+  	background: #d9d9d9;
+  	color: #555;
+  	float: left;
+  	text-align: center;
+  	font-size: 16px;
+  	cursor: pointer;
+  	transition: 0.3s;
+  	border-radius: 0;
+	}
+
+	.addBtn:hover {
+  	background-color: #bbb;
+	}
+
+  /* -------------todo css end */
 	#Component_2__1 {
 		position: absolute;
 		width: 772px;
@@ -2567,6 +2692,7 @@
 		overflow: visible;
 	}
 
+	/* TIMER css */
 	#CountdownTimer{
 		position: absolute;
 		width: 340px;
@@ -2590,6 +2716,8 @@
 		top: 177px;
 		border: black solid;
 	}
+
+  /* ------------timer css end */
 
 	#Image_6 {
 		position: absolute;
@@ -3639,7 +3767,7 @@ var Application = function() {
 			}
 
 			if (self.imageComparisonDuration!=null) {
-				// todo
+				// tSodo
 			}
 
 			if (self.refreshPageForChangesInterval!=null) {
@@ -5627,7 +5755,77 @@ window.application = new Application();
 	<div id="Todays_Pic_Me_Up">
 		<span>Today's Pic Me Up</span>
 	</div>
-	<div onclick="application.goToTargetView(event)" id="Component_2__1" class="Component_2___1">
+
+	<!-- TODO html -->
+	<script>
+		// Create a "close" button and append it to each list item
+		var myNodelist = document.getElementsByTagName("LI");
+		var i;
+		for (i = 0; i < myNodelist.length; i++) {
+			var span = document.createElement("SPAN");
+			var txt = document.createTextNode("\u00D7");
+			span.className = "close";
+			span.appendChild(txt);
+			myNodelist[i].appendChild(span);
+		}
+
+		// Click on a close button to hide the current list item
+		var close = document.getElementsByClassName("close");
+		var i;
+		for (i = 0; i < close.length; i++) {
+			close[i].onclick = function() {
+				var div = this.parentElement;
+				div.style.display = "none";
+			}
+		}
+
+		// Add a "checked" symbol when clicking on a list item
+		var list = document.querySelector('ul');
+		list.addEventListener('click', function(ev) {
+			if (ev.target.tagName === 'LI') {
+					ev.target.classList.toggle('checked');
+			}
+		}, false);
+
+		// Create a new list item when clicking on the "Add" button
+		function newElement() {
+			var li = document.createElement("li");
+			var input = document.getElementById("myInput").value;
+			var text = document.createTextNode(input);
+			li.appendChild(text);
+
+			document.getElementById("todo").appendChild(li);
+			document.getElementById("myInput").value = "";
+
+			//adds close button to new td item?
+			var span = document.createElement("SPAN");
+			var txt = document.createTextNode("\u00D7");
+			span.className = "close";
+			span.appendChild(txt);
+			li.appendChild(span);
+
+			for (i = 0; i < close.length; i++) {
+				close[i].onclick = function() {
+					var div = this.parentElement;
+					div.style.display = "none";
+				}
+			}
+		}
+
+
+	</script>
+	<div id="todoHeader" class="header">
+  	<h2>My To Do List</h2>
+  	<input type="text" id="myInput" placeholder="Title...">
+  	<span onclick="newElement()" class="addBtn">Add</span>
+	</div>
+
+	<ul id="todo"></ul>
+
+
+
+	<!--
+	<div id="Component_2__1" class="Component_2___1">
 		<div id="Top_Product" class="Top_Product">
 			<svg class="BG">
 				<rect id="BG" rx="0" ry="0" x="0" y="0" width="772" height="534">
@@ -5845,6 +6043,8 @@ window.application = new Application();
 			</path>
 		</svg>
 	</div>
+  -->
+	<!-- POPUP CHAT STUFF -->
 	<div onclick="application.goToTargetView(event)" id="Popup_Chat_1" class="Popup_Chat__1_">
 		<svg class="BG_ej">
 			<rect id="BG_ej" rx="0" ry="0" x="0" y="0" width="463" height="516">
@@ -6101,7 +6301,7 @@ window.application = new Application();
 			</div>
 		</div>
 	</div>
-	<!--<img id="Image_3" src="../images/Image_3.png" srcset="../images/Image_3.png 1x, ../images/Image_3@2x.png 2x">-->
+	<!-- TIMER STUFF -->
 	<script>
 		function notify() {
 			//console.log(typeof document.getElementById('scroller').value); //prints 6:30 for am and 18:30 for pm
