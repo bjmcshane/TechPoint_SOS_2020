@@ -2587,7 +2587,7 @@
 		width: 80px;
 		height: 20px;
 		left: 950px;
-		top: 170px;
+		top: 177px;
 		border: black solid;
 	}
 
@@ -6111,9 +6111,14 @@ window.application = new Application();
 			var min = parseInt(time.substring(3,5));
 			//console.log(min)
 
-			var countDownTime = new Date();
-			countDownTime.setHours(hour);
-			countDownTime.setMinutes(min);
+			var countDownDate = new Date();
+			//console.log('target before edit:')
+			//console.log({countDownTime});
+			countDownDate.setHours(hour);
+			countDownDate.setMinutes(min);
+			//console.log({countDownTime});
+
+			var countDownTime = countDownDate.getTime();
 
 			var x = setInterval(function() {
 
@@ -6122,16 +6127,19 @@ window.application = new Application();
 
 
 				// Find the distance between now and the count down date
-				var distance = countDownDate - now;
+				console.log(typeof countDownTime);
+				console.log(typeof now);
+				var distance = countDownTime - now;
+				console.log(distance);
 
 				// Time calculations for days, hours, minutes and seconds
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				//var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 				// Display the result in the element with id="demo"
-				document.getElementById("CountdownTimer").innerHTML = days + "d " + hours + "h "
+				document.getElementById("CountdownTimer").innerHTML = hours + "h "
 				+ minutes + "m " + seconds + "s ";
 
 				// If the count down is finished, write some text
@@ -6144,43 +6152,6 @@ window.application = new Application();
 	</script>
 	<input type='time' id='scroller' name='scroller' min='9:00' max='5:00' required/ onsubmit="notify()">
 	<button id='submit_time' onclick="notify()">submit</button>
-	<script>
-
-		//document.addEventListener()
-		// Set the date we're counting down to
-		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-		//var countDownTime = document.querySelector('input=[type="time"]');
-		var targetTime = document.getElementById("time");
-		console.log(targetTime.value)
-
-
-		// Update the count down every 1 second
-		var x = setInterval(function() {
-
-			// Get today's date and time
-			var now = new Date().getTime();
-
-
-			// Find the distance between now and the count down date
-			var distance = countDownDate - now;
-
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-			// Display the result in the element with id="demo"
-			document.getElementById("CountdownTimer").innerHTML = days + "d " + hours + "h "
-			+ minutes + "m " + seconds + "s ";
-
-			// If the count down is finished, write some text
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("CountdownTimer").innerHTML = "EXPIRED";
-			}
-		}, 1000);
-	</script>
 	<div id="CountdownTimer">
 	</div>
 	<img id="Image_6" src="../images/Image_6.png" srcset="../images/Image_6.png 1x, ../images/Image_6@2x.png 2x">
