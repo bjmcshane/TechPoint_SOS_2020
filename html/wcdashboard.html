@@ -2566,6 +2566,7 @@
 		top: 232px;
 		overflow: visible;
 	}
+
 	#CountdownTimer{
 		position: absolute;
 		width: 340px;
@@ -2574,6 +2575,22 @@
 		top: 232px;
 		font-size: 30;
 	}
+	#scroller{
+		position: absolute;
+		width: 100px;
+		height: 50px;
+		left: 840px;
+		top: 160px;
+	}
+	#submit_time{
+		position: absolute;
+		width: 80px;
+		height: 20px;
+		left: 950px;
+		top: 170px;
+		border: black solid;
+	}
+
 	#Image_6 {
 		position: absolute;
 		width: 245px;
@@ -2769,6 +2786,10 @@ var Application = function() {
 
 		// get document start values immediately
 		self.requestRefreshUpdate();
+	}
+
+	self.noftify = function() {
+		console.log("submitted!");
 	}
 
 	/**
@@ -6082,14 +6103,63 @@ window.application = new Application();
 	</div>
 	<!--<img id="Image_3" src="../images/Image_3.png" srcset="../images/Image_3.png 1x, ../images/Image_3@2x.png 2x">-->
 	<script>
+		function notify() {
+			//console.log(typeof document.getElementById('scroller').value); //prints 6:30 for am and 18:30 for pm
+			var time = document.getElementById('scroller').value;
+			var hour = parseInt(time.substring(0,2));
+			//console.log(hour)
+			var min = parseInt(time.substring(3,5));
+			//console.log(min)
+
+			var countDownTime = new Date();
+			countDownTime.setHours(hour);
+			countDownTime.setMinutes(min);
+
+			var x = setInterval(function() {
+
+				// Get today's date and time
+				var now = new Date().getTime();
+
+
+				// Find the distance between now and the count down date
+				var distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Display the result in the element with id="demo"
+				document.getElementById("CountdownTimer").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+
+				// If the count down is finished, write some text
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("CountdownTimer").innerHTML = "EXPIRED";
+				}
+			}, 1000);
+		}
+	</script>
+	<input type='time' id='scroller' name='scroller' min='9:00' max='5:00' required/ onsubmit="notify()">
+	<button id='submit_time' onclick="notify()">submit</button>
+	<script>
+
+		//document.addEventListener()
 		// Set the date we're counting down to
 		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+		//var countDownTime = document.querySelector('input=[type="time"]');
+		var targetTime = document.getElementById("time");
+		console.log(targetTime.value)
+
 
 		// Update the count down every 1 second
 		var x = setInterval(function() {
 
 			// Get today's date and time
 			var now = new Date().getTime();
+
 
 			// Find the distance between now and the count down date
 			var distance = countDownDate - now;
