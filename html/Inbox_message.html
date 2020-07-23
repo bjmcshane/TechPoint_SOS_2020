@@ -1,0 +1,6014 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inbox-message</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Inbox-message;
+		--web-view-id: Inbox-message;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Inbox-message;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Inbox-message {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Inbox-message;
+		--web-view-id: Inbox-message;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
+	}
+	#Inbox {
+		left: 442px;
+		top: 101px;
+		position: absolute;
+		overflow: visible;
+		width: 66px;
+		white-space: nowrap;
+		line-height: 40px;
+		margin-top: -6px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(67,66,93,1);
+	}
+	#Navbar {
+		position: absolute;
+		width: 1340px;
+		height: 70px;
+		left: 367px;
+		top: 0px;
+		overflow: visible;
+	}
+	#NavbarBG {
+		fill: rgba(255,255,255,1);
+	}
+	.NavbarBG {
+		filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.039));
+		position: absolute;
+		overflow: visible;
+		width: 1358px;
+		height: 88px;
+		left: 0px;
+		top: 0px;
+	}
+	#User_Menu {
+		position: absolute;
+		width: 127px;
+		height: 38px;
+		left: 1193px;
+		top: 16px;
+		overflow: visible;
+	}
+	#Username {
+		left: 0px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 53px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Avatar {
+		position: absolute;
+		width: 38px;
+		height: 38px;
+		left: 89px;
+		top: 0px;
+		overflow: visible;
+	}
+	#small-down {
+		position: absolute;
+		width: 11px;
+		height: 7px;
+		left: 67px;
+		top: 16px;
+		overflow: visible;
+	}
+	#Path_26 {
+		fill: rgba(164,175,183,1);
+	}
+	.Path_26 {
+		overflow: visible;
+		position: absolute;
+		width: 11px;
+		height: 7px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Divider {
+		fill: rgba(235,235,242,1);
+	}
+	.Divider {
+		position: absolute;
+		overflow: visible;
+		width: 1px;
+		height: 28px;
+		left: 1171px;
+		top: 21px;
+	}
+	#Notification {
+		position: absolute;
+		width: 19px;
+		height: 21px;
+		left: 1135px;
+		top: 22px;
+		overflow: visible;
+	}
+	#Notification_Icon {
+		fill: rgba(188,188,203,1);
+	}
+	.Notification_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Notification_Badge {
+		fill: rgba(255,192,106,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Notification_Badge {
+		position: absolute;
+		overflow: visible;
+		width: 12px;
+		height: 12px;
+		left: 11px;
+		top: 0px;
+	}
+	#Chat_Icon {
+		fill: rgba(188,188,203,1);
+	}
+	.Chat_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 15.999px;
+		height: 15.999px;
+		left: 1089px;
+		top: 27px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Support_Iocn {
+		fill: rgba(188,188,203,1);
+	}
+	.Support_Iocn {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 1043px;
+		top: 27px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Search_Input {
+		position: absolute;
+		width: 224px;
+		height: 18px;
+		left: 20px;
+		top: 27px;
+		overflow: visible;
+	}
+	#Search_transactions_invoices_o {
+		left: 26px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 199px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#icon_search {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#icon_search_ {
+		fill: rgba(188,188,203,1);
+	}
+	.icon_search_ {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Statistics {
+		position: absolute;
+		width: 1170px;
+		height: 752px;
+		left: 442px;
+		top: 168px;
+		overflow: visible;
+	}
+	#StatisticsBG {
+		fill: rgba(255,255,255,1);
+	}
+	.StatisticsBG {
+		filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.039));
+		position: absolute;
+		overflow: visible;
+		width: 1188px;
+		height: 770px;
+		left: 0px;
+		top: 0px;
+	}
+	#btn_compose {
+		position: absolute;
+		width: 155px;
+		height: 35px;
+		left: 465px;
+		top: 193px;
+		overflow: visible;
+	}
+	#Rectangle_166 {
+		fill: rgba(59,134,255,1);
+	}
+	.Rectangle_166 {
+		position: absolute;
+		overflow: visible;
+		width: 155px;
+		height: 35px;
+		left: 0px;
+		top: 0px;
+	}
+	#Compose {
+		left: 48px;
+		top: 8px;
+		position: absolute;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#contactlist {
+		position: absolute;
+		width: 300px;
+		height: 752.448px;
+		left: 642px;
+		top: 168px;
+		overflow: visible;
+	}
+	#mail {
+		position: absolute;
+		width: 300px;
+		height: 667px;
+		left: 0px;
+		top: 85px;
+		overflow: hidden;
+	}
+	#mail_bh {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_159 {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159 {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#Names_c {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Dates_c {
+		left: 262px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_c {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_c {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_c {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_bn {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 81px;
+		overflow: visible;
+	}
+	#Rectangle_159_bo {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_bo {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5 {
+		left: 262px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_br {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_br {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_bs {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_bt {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 162px;
+		overflow: visible;
+	}
+	#Rectangle_159_bu {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_bu {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_bv {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 72px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_bw {
+		left: 262px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_bx {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_bx {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_by {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_bz {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 243px;
+		overflow: visible;
+	}
+	#Rectangle_159_b {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_b {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_b {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 90px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_b {
+		left: 257px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_b {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_b {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_b {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_b {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 324px;
+		overflow: visible;
+	}
+	#Rectangle_159_ca {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_ca {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_ca {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 115px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_ca {
+		left: 257px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_ca {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_ca {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_ca {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_cb {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 405px;
+		overflow: visible;
+	}
+	#Rectangle_159_cc {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_cc {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_cd {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 105px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_ce {
+		left: 257px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_cf {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_cf {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_cg {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_ch {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 486px;
+		overflow: visible;
+	}
+	#Rectangle_159_ci {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_ci {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_cj {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_ck {
+		left: 257px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_cl {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_cl {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_cm {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_cn {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 567px;
+		overflow: visible;
+	}
+	#Rectangle_159_co {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_co {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_cp {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 60px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_cq {
+		left: 256px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_cr {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_cr {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_cs {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_ct {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 648px;
+		overflow: visible;
+	}
+	#Rectangle_159_cu {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_159_cu {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#David_James_cv {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Jan_5_cw {
+		left: 256px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_cx {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_cx {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_cy {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#mail_cz {
+		position: absolute;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 85px;
+		overflow: visible;
+	}
+	#Rectangle_159_c {
+		fill: rgba(241,241,243,1);
+	}
+	.Rectangle_159_c {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#Names_c {
+		left: 70px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Checking_in {
+		left: 70px;
+		top: 46px;
+		position: absolute;
+		overflow: visible;
+		width: 54px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Dates_c {
+		left: 262px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_294_c {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_294_c {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 80px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_c {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 23px;
+		top: 20px;
+		overflow: visible;
+	}
+	#tag_color {
+		position: absolute;
+		width: 3px;
+		height: 565px;
+		left: 0px;
+		top: 85px;
+		overflow: visible;
+	}
+	#tag {
+		fill: rgba(255,101,101,1);
+	}
+	.tag {
+		position: absolute;
+		overflow: visible;
+		width: 3px;
+		height: 80px;
+		left: 0px;
+		top: 0px;
+	}
+	#tag_c {
+		fill: rgba(163,160,251,1);
+	}
+	.tag_c {
+		position: absolute;
+		overflow: visible;
+		width: 3px;
+		height: 80px;
+		left: 0px;
+		top: 80px;
+	}
+	#tag_da {
+		fill: rgba(59,134,255,1);
+	}
+	.tag_da {
+		position: absolute;
+		overflow: visible;
+		width: 3px;
+		height: 80px;
+		left: 0px;
+		top: 323px;
+	}
+	#tag_db {
+		fill: rgba(163,160,251,1);
+	}
+	.tag_db {
+		position: absolute;
+		overflow: visible;
+		width: 3px;
+		height: 80px;
+		left: 0px;
+		top: 485px;
+	}
+	#Search_Input_db {
+		position: absolute;
+		width: 300px;
+		height: 86px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_181 {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_181 {
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		height: 86px;
+		left: 0px;
+		top: 0px;
+	}
+	#Search_Message_or_Name {
+		left: 55px;
+		top: 34px;
+		position: absolute;
+		overflow: visible;
+		width: 148px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Search_Icon {
+		fill: rgba(188,188,203,1);
+	}
+	.Search_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 29px;
+		top: 34px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#line {
+		position: absolute;
+		width: 300px;
+		height: 752.448px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_311 {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_311 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 752.448px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_312 {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_312 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 752.448px;
+		left: 300px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_313 {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_313 {
+		overflow: visible;
+		position: absolute;
+		width: 300px;
+		height: 1px;
+		left: 0px;
+		top: 85.342px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#tag_dj {
+		position: absolute;
+		width: 200.342px;
+		height: 169px;
+		left: 441.658px;
+		top: 522px;
+		overflow: visible;
+	}
+	#Rectangle_182 {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_182 {
+		position: absolute;
+		overflow: visible;
+		width: 200px;
+		height: 169px;
+		left: 0.342px;
+		top: 0px;
+	}
+	#tag_dl {
+		position: absolute;
+		width: 133px;
+		height: 86px;
+		left: 46.342px;
+		top: 58px;
+		overflow: hidden;
+	}
+	#tag_dl_0 {
+		position: absolute;
+		width: 29px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Sales {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#tag_dl_1 {
+		position: absolute;
+		width: 54px;
+		height: 18px;
+		left: 0px;
+		top: 33px;
+		overflow: visible;
+	}
+	#Marketing {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 55px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#tag_dl_2 {
+		position: absolute;
+		width: 37px;
+		height: 18px;
+		left: 0px;
+		top: 66px;
+		overflow: visible;
+	}
+	#Design {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 38px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#Tag_ds {
+		left: 23.342px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#tagcolor {
+		position: absolute;
+		width: 10px;
+		height: 76px;
+		left: 23.342px;
+		top: 61px;
+		overflow: visible;
+	}
+	#Ellipse_36 {
+		fill: rgba(163,160,251,1);
+	}
+	.Ellipse_36 {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 0px;
+		top: 0px;
+	}
+	#Ellipse_37 {
+		fill: rgba(59,134,255,1);
+	}
+	.Ellipse_37 {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 0px;
+		top: 33px;
+	}
+	#Ellipse_38 {
+		fill: rgba(255,101,101,1);
+	}
+	.Ellipse_38 {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 0px;
+		top: 66px;
+	}
+	#Path_309 {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_309 {
+		overflow: visible;
+		position: absolute;
+		width: 200.342px;
+		height: 1px;
+		left: 0px;
+		top: 0.342px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#tab {
+		position: absolute;
+		width: 200.342px;
+		height: 269.342px;
+		left: 441.658px;
+		top: 253px;
+		overflow: visible;
+	}
+	#Rectangle_182_dz {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_182_dz {
+		position: absolute;
+		overflow: visible;
+		width: 200px;
+		height: 269px;
+		left: 0.342px;
+		top: 0px;
+	}
+	#Path_309_d {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_309_d {
+		overflow: visible;
+		position: absolute;
+		width: 200.342px;
+		height: 1px;
+		left: 0px;
+		top: 0.342px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_310 {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_310 {
+		overflow: visible;
+		position: absolute;
+		width: 200.342px;
+		height: 1px;
+		left: 0px;
+		top: 269.342px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID2 {
+		left: 172.342px;
+		top: 157px;
+		position: absolute;
+		overflow: visible;
+		width: 7px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text {
+		position: absolute;
+		width: 106px;
+		height: 187px;
+		left: 23.342px;
+		top: 58px;
+		overflow: hidden;
+	}
+	#text_0 {
+		position: absolute;
+		width: 25px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Sent {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_1 {
+		position: absolute;
+		width: 32px;
+		height: 18px;
+		left: 0px;
+		top: 33px;
+		overflow: visible;
+	}
+	#Drafts {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 33px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_2 {
+		position: absolute;
+		width: 30px;
+		height: 18px;
+		left: 0px;
+		top: 66px;
+		overflow: visible;
+	}
+	#Trash {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_3 {
+		position: absolute;
+		width: 55px;
+		height: 18px;
+		left: 0px;
+		top: 99px;
+		overflow: visible;
+	}
+	#Important {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 56px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_4 {
+		position: absolute;
+		width: 31px;
+		height: 18px;
+		left: 0px;
+		top: 132px;
+		overflow: visible;
+	}
+	#Spam {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_5 {
+		position: absolute;
+		width: 40px;
+		height: 18px;
+		left: 0px;
+		top: 165px;
+		overflow: visible;
+	}
+	#Starred {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#text_eg {
+		position: absolute;
+		width: 155px;
+		height: 18px;
+		left: 23.342px;
+		top: 25px;
+		overflow: visible;
+	}
+	#Inbox_eh {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(59,134,255,1);
+	}
+	#ID5 {
+		left: 148px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 8px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(59,134,255,1);
+	}
+	#Side_Menu {
+		position: absolute;
+		width: 260px;
+		height: 960px;
+		left: 107px;
+		top: 0px;
+		overflow: visible;
+	}
+	#SidebarBG {
+		fill: rgba(67,66,93,1);
+	}
+	.SidebarBG {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 960px;
+		left: 0px;
+		top: 0px;
+	}
+	#Main_Menu {
+		position: absolute;
+		width: 260px;
+		height: 584px;
+		left: 0px;
+		top: 73px;
+		overflow: visible;
+	}
+	#Settings {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 531px;
+		overflow: visible;
+	}
+	#BG {
+		fill: rgba(67,66,93,1);
+	}
+	.BG {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Settings_eo {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_setting {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Path_108 {
+		fill: rgba(165,164,191,1);
+	}
+	.Path_108 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Help_Center {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 472px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Check_In_Out.html;
+		cursor: pointer;
+	}
+	#BG_es {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_es {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Check-InOut {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 84px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_help-center {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Path_107 {
+		fill: rgba(165,164,191,1);
+	}
+	.Path_107 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Calendar {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 413px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Calendar.html;
+		cursor: pointer;
+	}
+	#BG_ex {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_ex {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Calendar_ey {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 58px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_calendar {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 17px;
+		overflow: visible;
+	}
+	#Rectangle_557 {
+		fill: transparent;
+	}
+	.Rectangle_557 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	#Path_149 {
+		fill: rgba(165,164,191,1);
+	}
+	.Path_149 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Chat_Room {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 354px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Chatroom.html;
+		cursor: pointer;
+	}
+	#BG_e {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_e {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Chat_Room_e {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 70px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_chat-room {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Union_11 {
+		fill: rgba(165,164,191,1);
+	}
+	.Union_11 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Customers {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 295px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Department.html;
+		cursor: pointer;
+	}
+	#BG_fa {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fa {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Deparment {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 72px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_customers {
+		position: absolute;
+		width: 14px;
+		height: 16px;
+		left: 26px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Union_10 {
+		fill: rgba(165,164,191,1);
+	}
+	.Union_10 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Invoices {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 236px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Watercooler.html;
+		cursor: pointer;
+	}
+	#BG_fd {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fd {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Watercooler_Options {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 129px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_Invoices {
+		position: absolute;
+		width: 14px;
+		height: 16px;
+		left: 26px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Path_102 {
+		fill: rgba(165,164,191,1);
+	}
+	.Path_102 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Products {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 177px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Productivity.html;
+		cursor: pointer;
+	}
+	#BG_fi {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fi {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Productivity {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_products {
+		position: absolute;
+		width: 15.999px;
+		height: 15.999px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Union_9 {
+		fill: rgba(165,164,191,1);
+	}
+	.Union_9 {
+		overflow: visible;
+		position: absolute;
+		width: 15.999px;
+		height: 15.999px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Inbox_fm {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 119px;
+		overflow: visible;
+	}
+	#BG_fn {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fn {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Inbox_fo {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_inbox {
+		position: absolute;
+		width: 16px;
+		height: 14px;
+		left: 25px;
+		top: 19px;
+		overflow: visible;
+	}
+	#Path_358 {
+		fill: rgba(163,160,251,1);
+	}
+	.Path_358 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 14px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Dashboard {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 59px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: wcdashboard.html;
+		cursor: pointer;
+	}
+	#BG_fs {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fs {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Dashboard_ft {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 69px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_dashboard {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Union_8 {
+		fill: rgba(165,164,191,1);
+	}
+	.Union_8 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Home {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BG_fx {
+		fill: rgba(67,66,93,1);
+	}
+	.BG_fx {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Home_fy {
+		left: 52px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+	}
+	#icon_home {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 25px;
+		top: 18px;
+		overflow: visible;
+	}
+	#Path_357 {
+		fill: rgba(165,164,191,1);
+	}
+	.Path_357 {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hover {
+		position: absolute;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 118px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Inbox.html;
+		cursor: pointer;
+	}
+	#BG_f {
+		fill: rgba(0,0,0,0.102);
+	}
+	.BG_f {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Vertical_Line {
+		fill: rgba(163,160,251,1);
+	}
+	.Vertical_Line {
+		position: absolute;
+		overflow: visible;
+		width: 5px;
+		height: 53px;
+		left: 0px;
+		top: 0px;
+	}
+	#Logo {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BG_ga {
+		fill: rgba(0,0,0,0.102);
+	}
+	.BG_ga {
+		filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.051));
+		overflow: visible;
+		position: absolute;
+		width: 269px;
+		height: 79px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Logo_f {
+		left: 20px;
+		top: 26px;
+		position: absolute;
+		overflow: visible;
+		width: 131px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	#maildetail {
+		position: absolute;
+		width: 669.342px;
+		height: 676px;
+		left: 942.658px;
+		top: 198px;
+		overflow: visible;
+	}
+	#title {
+		position: absolute;
+		width: 669.342px;
+		height: 113.342px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Label {
+		position: absolute;
+		width: 75px;
+		height: 24px;
+		left: 37.342px;
+		top: 0px;
+		overflow: visible;
+	}
+	#LabelBG {
+		fill: rgba(255,101,101,1);
+	}
+	.LabelBG {
+		position: absolute;
+		overflow: visible;
+		width: 75px;
+		height: 24px;
+		left: 0px;
+		top: 0px;
+	}
+	#LabelContent {
+		left: 22px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 33px;
+		white-space: nowrap;
+		line-height: 24px;
+		margin-top: -6.5px;
+		text-align: center;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 11px;
+		color: rgba(255,255,255,1);
+	}
+	#Protective_Preventative_Mainte {
+		left: 124.342px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 276px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(77,79,92,1);
+	}
+	#Path_309_gd {
+		fill: rgba(164,175,183,1);
+	}
+	.Path_309_gd {
+		overflow: visible;
+		position: absolute;
+		width: 11px;
+		height: 7px;
+		left: 627.343px;
+		top: 9px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#David_James_ge {
+		left: 84.342px;
+		top: 44px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#to_me {
+		left: 84.342px;
+		top: 69px;
+		position: absolute;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(128,132,149,1);
+	}
+	#Jan_5_2018 {
+		left: 583.342px;
+		top: 46px;
+		position: absolute;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(67,66,93,1);
+	}
+	#Path_310_gh {
+		fill: transparent;
+		stroke: rgba(241,241,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_310_gh {
+		overflow: visible;
+		position: absolute;
+		width: 669.342px;
+		height: 1px;
+		left: 0px;
+		top: 113.342px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar_gi {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 37.342px;
+		top: 43px;
+		overflow: visible;
+	}
+	#Hey_John_I_was_just_seeing_how {
+		left: 37.342px;
+		top: 146px;
+		position: absolute;
+		overflow: visible;
+		width: 601px;
+		height: 400px;
+		line-height: 23px;
+		margin-top: -5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(77,79,92,1);
+	}
+	#replybox {
+		position: absolute;
+		width: 600px;
+		height: 150px;
+		left: 37.342px;
+		top: 526px;
+		overflow: visible;
+	}
+	#Rectangle_565 {
+		fill: rgba(245,246,250,1);
+	}
+	.Rectangle_565 {
+		position: absolute;
+		overflow: visible;
+		width: 600px;
+		height: 150px;
+		left: 0px;
+		top: 0px;
+	}
+	#Click_here_to_Reply {
+		left: 20px;
+		top: 20px;
+		position: absolute;
+		overflow: visible;
+		width: 101px;
+		white-space: nowrap;
+		line-height: 23px;
+		margin-top: -5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(164,175,183,1);
+	}
+	#Image_6 {
+		position: absolute;
+		width: 147px;
+		height: 169px;
+		left: 164px;
+		top: 767px;
+		overflow: visible;
+	}
+	#Image_3 {
+		position: absolute;
+		width: 231px;
+		height: 95px;
+		left: 122px;
+		top: 656px;
+		overflow: visible;
+	}
+</style>
+<script id="applicationScript">
+///////////////////////////////////////
+// INITIALIZATION
+///////////////////////////////////////
+
+/**
+ * Functionality for scaling, showing by media query, and navigation between multiple pages on a single page. 
+ * Code subject to change.
+ **/
+
+if (window.console==null) { window["console"] = { log : function() {} } }; // some browsers do not set console
+
+var Application = function() {
+	// event constants
+	this.prefix = "--web-";
+	this.NAVIGATION_CHANGE = "viewChange";
+	this.VIEW_NOT_FOUND = "viewNotFound";
+	this.VIEW_CHANGE = "viewChange";
+	this.VIEW_CHANGING = "viewChanging";
+	this.STATE_NOT_FOUND = "stateNotFound";
+	this.APPLICATION_COMPLETE = "applicationComplete";
+	this.APPLICATION_RESIZE = "applicationResize";
+	this.SIZE_STATE_NAME = "data-is-view-scaled";
+	this.STATE_NAME = this.prefix + "state";
+
+	this.lastTrigger = null;
+	this.lastView = null;
+	this.lastState = null;
+	this.lastOverlay = null;
+	this.currentView = null;
+	this.currentState = null;
+	this.currentOverlay = null;
+	this.currentQuery = {index: 0, rule: null, mediaText: null, id: null};
+	this.inclusionQuery = "(min-width: 0px)";
+	this.exclusionQuery = "none and (min-width: 99999px)";
+	this.LastModifiedDateLabelName = "LastModifiedDateLabel";
+	this.viewScaleSliderId = "ViewScaleSliderInput";
+	this.pageRefreshedName = "showPageRefreshedNotification";
+	this.applicationStylesheet = null;
+	this.mediaQueryDictionary = {};
+	this.viewsDictionary = {};
+	this.addedViews = [];
+	this.views = {};
+	this.viewIds = [];
+	this.viewQueries = {};
+	this.overlays = {};
+	this.overlayIds = [];
+	this.numberOfViews = 0;
+	this.verticalPadding = 0;
+	this.horizontalPadding = 0;
+	this.stateName = null;
+	this.viewScale = 1;
+	this.viewLeft = 0;
+	this.viewTop = 0;
+	this.horizontalScrollbarsNeeded = false;
+	this.verticalScrollbarsNeeded = false;
+
+	// view settings
+	this.showUpdateNotification = false;
+	this.showNavigationControls = false;
+	this.scaleViewsToFit = false;
+	this.scaleToFitOnDoubleClick = false;
+	this.actualSizeOnDoubleClick = false;
+	this.scaleViewsOnResize = false;
+	this.navigationOnKeypress = false;
+	this.showViewName = false;
+	this.enableDeepLinking = true;
+	this.refreshPageForChanges = false;
+	this.showRefreshNotifications = true;
+
+	// view controls
+	this.scaleViewSlider = null;
+	this.lastModifiedLabel = null;
+	this.supportsPopState = false; // window.history.pushState!=null;
+	this.initialized = false;
+
+	// refresh properties
+	this.refreshDuration = 250;
+	this.lastModifiedDate = null;
+	this.refreshRequest = null;
+	this.refreshInterval = null;
+	this.refreshContent = null;
+	this.refreshContentSize = null;
+	this.refreshCheckContent = false;
+	this.refreshCheckContentSize = false;
+
+	var self = this;
+
+	self.initialize = function(event) {
+		var view = self.getVisibleView();
+		var views = self.getVisibleViews();
+		if (view==null) view = self.getInitialView();
+		self.collectViews();
+		self.collectOverlays();
+		self.collectMediaQueries();
+
+		for (let index = 0; index < views.length; index++) {
+			var view = views[index];
+			self.setViewOptions(view);
+			self.setViewVariables(view);
+			self.centerView(view);
+		}
+
+		// sometimes the body size is 0 so we call this now and again later
+		if (self.initialized) {
+			window.addEventListener(self.NAVIGATION_CHANGE, self.viewChangeHandler);
+			window.addEventListener("keyup", self.keypressHandler);
+			window.addEventListener("keypress", self.keypressHandler);
+			window.addEventListener("resize", self.resizeHandler);
+			window.document.addEventListener("dblclick", self.doubleClickHandler);
+
+			if (self.supportsPopState) {
+				window.addEventListener('popstate', self.popStateHandler);
+			}
+			else {
+				window.addEventListener('hashchange', self.hashChangeHandler);
+			}
+
+			// we are ready to go
+			window.dispatchEvent(new Event(self.APPLICATION_COMPLETE));
+		}
+
+		if (self.initialized==false) {
+			if (self.enableDeepLinking) {
+				self.syncronizeViewToURL();
+			} 
+	
+			if (self.refreshPageForChanges) {
+				self.setupRefreshForChanges();
+			}
+	
+			self.initialized = true;
+		}
+		
+		if (self.scaleViewsToFit) {
+			self.viewScale = self.scaleViewToFit(view);
+			
+			if (self.viewScale<0) {
+				setTimeout(self.scaleViewToFit, 500, view);
+			}
+		}
+		else if (view) {
+			self.viewScale = self.getViewScaleValue(view);
+			self.centerView(view);
+			self.updateSliderValue(self.viewScale);
+		}
+		else {
+			// no view found
+		}
+	
+		if (self.showUpdateNotification) {
+			self.showNotification();
+		}
+
+		//"addEventListener" in window ? null : window.addEventListener = window.attachEvent;
+		//"addEventListener" in document ? null : document.addEventListener = document.attachEvent;
+	}
+
+
+	///////////////////////////////////////
+	// AUTO REFRESH 
+	///////////////////////////////////////
+
+	self.setupRefreshForChanges = function() {
+		self.refreshRequest = new XMLHttpRequest();
+
+		if (!self.refreshRequest) {
+			return false;
+		}
+
+		// get document start values immediately
+		self.requestRefreshUpdate();
+	}
+
+	/**
+	 * Attempt to check the last modified date by the headers 
+	 * or the last modified property from the byte array (experimental)
+	 **/
+	self.requestRefreshUpdate = function() {
+		var url = document.location.href;
+		var protocol = window.location.protocol;
+		var method;
+		
+		try {
+
+			if (self.refreshCheckContentSize) {
+				self.refreshRequest.open('HEAD', url, true);
+			}
+			else if (self.refreshCheckContent) {
+				self.refreshContent = document.documentElement.outerHTML;
+				self.refreshRequest.open('GET', url, true);
+				self.refreshRequest.responseType = "text";
+			}
+			else {
+
+				// get page last modified date for the first call to compare to later
+				if (self.lastModifiedDate==null) {
+
+					// File system does not send headers in FF so get blob if possible
+					if (protocol=="file:") {
+						self.refreshRequest.open("GET", url, true);
+						self.refreshRequest.responseType = "blob";
+					}
+					else {
+						self.refreshRequest.open("HEAD", url, true);
+						self.refreshRequest.responseType = "blob";
+					}
+
+					self.refreshRequest.onload = self.refreshOnLoadOnceHandler;
+
+					// In some browsers (Chrome & Safari) this error occurs at send: 
+					// 
+					// Chrome - Access to XMLHttpRequest at 'file:///index.html' from origin 'null' 
+					// has been blocked by CORS policy: 
+					// Cross origin requests are only supported for protocol schemes: 
+					// http, data, chrome, chrome-extension, https.
+					// 
+					// Safari - XMLHttpRequest cannot load file:///Users/user/Public/index.html. Cross origin requests are only supported for HTTP.
+					// 
+					// Solution is to run a local server, set local permissions or test in another browser
+					self.refreshRequest.send(null);
+
+					// In MS browsers the following behavior occurs possibly due to an AJAX call to check last modified date: 
+					// 
+					// DOM7011: The code on this page disabled back and forward caching.
+
+					// In Brave (Chrome) error when on the server
+					// index.js:221 HEAD https://www.example.com/ net::ERR_INSUFFICIENT_RESOURCES
+					// self.refreshRequest.send(null);
+
+				}
+				else {
+					self.refreshRequest = new XMLHttpRequest();
+					self.refreshRequest.onreadystatechange = self.refreshHandler;
+					self.refreshRequest.ontimeout = function() {
+						self.log("Couldn't find page to check for updates");
+					}
+					
+					var method;
+					if (protocol=="file:") {
+						method = "GET";
+					}
+					else {
+						method = "HEAD";
+					}
+
+					//refreshRequest.open('HEAD', url, true);
+					self.refreshRequest.open(method, url, true);
+					self.refreshRequest.responseType = "blob";
+					self.refreshRequest.send(null);
+				}
+			}
+		}
+		catch (error) {
+			self.log("Refresh failed for the following reason:")
+			self.log(error);
+		}
+	}
+
+	self.refreshHandler = function() {
+		var contentSize;
+
+		try {
+
+			if (self.refreshRequest.readyState === XMLHttpRequest.DONE) {
+				
+				if (self.refreshRequest.status === 2 || 
+					self.refreshRequest.status === 200) {
+					var pageChanged = false;
+
+					self.updateLastModifiedLabel();
+
+					if (self.refreshCheckContentSize) {
+						var lastModifiedHeader = self.refreshRequest.getResponseHeader("Last-Modified");
+						contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+						//lastModifiedDate = refreshRequest.getResponseHeader("Last-Modified");
+						var headers = self.refreshRequest.getAllResponseHeaders();
+						var hasContentHeader = headers.indexOf("Content-Length")!=-1;
+						
+						if (hasContentHeader) {
+							contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+
+							// size has not been set yet
+							if (self.refreshContentSize==null) {
+								self.refreshContentSize = contentSize;
+								// exit and let interval call this method again
+								return;
+							}
+
+							if (contentSize!=self.refreshContentSize) {
+								pageChanged = true;
+							}
+						}
+					}
+					else if (self.refreshCheckContent) {
+
+						if (self.refreshRequest.responseText!=self.refreshContent) {
+							pageChanged = true;
+						}
+					}
+					else {
+						lastModifiedHeader = self.getLastModified(self.refreshRequest);
+
+						if (self.lastModifiedDate!=lastModifiedHeader) {
+							self.log("lastModifiedDate:" + self.lastModifiedDate + ",lastModifiedHeader:" +lastModifiedHeader);
+							pageChanged = true;
+						}
+
+					}
+
+					
+					if (pageChanged) {
+						clearInterval(self.refreshInterval);
+						self.refreshUpdatedPage();
+						return;
+					}
+
+				}
+				else {
+					self.log('There was a problem with the request.');
+				}
+
+			}
+		}
+		catch( error ) {
+			//console.log('Caught Exception: ' + error);
+		}
+	}
+
+	self.refreshOnLoadOnceHandler = function(event) {
+
+		// get the last modified date
+		if (self.refreshRequest.response) {
+			self.lastModifiedDate = self.getLastModified(self.refreshRequest);
+
+			if (self.lastModifiedDate!=null) {
+
+				if (self.refreshInterval==null) {
+					self.refreshInterval = setInterval(self.requestRefreshUpdate, self.refreshDuration);
+				}
+			}
+			else {
+				self.log("Could not get last modified date from the server");
+			}
+		}
+	}
+
+	self.refreshUpdatedPage = function() {
+		if (self.showRefreshNotifications) {
+			var date = new Date().setTime((new Date().getTime()+10000));
+			document.cookie = encodeURIComponent(self.pageRefreshedName) + "=true" + "; max-age=6000;" + " path=/";
+		}
+
+		document.location.reload(true);
+	}
+
+	self.showNotification = function(duration) {
+		var notificationID = self.pageRefreshedName+"ID";
+		var notification = document.getElementById(notificationID);
+		if (duration==null) duration = 4000;
+
+		if (notification!=null) {return;}
+
+		notification = document.createElement("div");
+		notification.id = notificationID;
+		notification.textContent = "PAGE UPDATED";
+		var styleRule = ""
+		styleRule = "position: fixed; padding: 7px 16px 6px 16px; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; left: 50%;";
+		styleRule += "top: 20px; background-color: rgba(0,0,0,.5); border-radius: 12px; color:rgb(235, 235, 235); transition: all 2s linear;";
+		styleRule += "transform: translateX(-50%); letter-spacing: .5px; filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, .1))";
+		notification.setAttribute("style", styleRule);
+
+		notification.className= "PageRefreshedClass";
+		
+		document.body.appendChild(notification);
+
+		setTimeout(function() {
+			notification.style.opacity = "0";
+			notification.style.filter = "drop-shadow( 0px 0px 0px rgba(0,0,0, .5))";
+			setTimeout(function() {
+				notification.parentNode.removeChild(notification);
+			}, duration)
+		}, duration);
+
+		document.cookie = encodeURIComponent(self.pageRefreshedName) + "=; max-age=1; path=/";
+	}
+
+	/**
+	 * Get the last modified date from the header 
+	 * or file object after request has been received
+	 **/
+	self.getLastModified = function(request) {
+		var date;
+
+		// file protocol - FILE object with last modified property
+		if (request.response && request.response.lastModified) {
+			date = request.response.lastModified;
+		}
+		
+		// http protocol - check headers
+		if (date==null) {
+			date = request.getResponseHeader("Last-Modified");
+		}
+
+		return date;
+	}
+
+	self.updateLastModifiedLabel = function() {
+		var labelValue = "";
+		
+		if (self.lastModifiedLabel==null) {
+			self.lastModifiedLabel = document.getElementById("LastModifiedLabel");
+		}
+
+		if (self.lastModifiedLabel) {
+			var seconds = parseInt(((new Date().getTime() - Date.parse(document.lastModified)) / 1000 / 60) * 100 + "");
+			var minutes = 0;
+			var hours = 0;
+
+			if (seconds < 60) {
+				seconds = Math.floor(seconds/10)*10;
+				labelValue = seconds + " seconds";
+			}
+			else {
+				minutes = parseInt((seconds/60) + "");
+
+				if (minutes>60) {
+					hours = parseInt((seconds/60/60) +"");
+					labelValue += hours==1 ? " hour" : " hours";
+				}
+				else {
+					labelValue = minutes+"";
+					labelValue += minutes==1 ? " minute" : " minutes";
+				}
+			}
+			
+			if (seconds<10) {
+				labelValue = "Updated now";
+			}
+			else {
+				labelValue = "Updated " + labelValue + " ago";
+			}
+
+			if (self.lastModifiedLabel.firstElementChild) {
+				self.lastModifiedLabel.firstElementChild.textContent = labelValue;
+
+			}
+			else if ("textContent" in self.lastModifiedLabel) {
+				self.lastModifiedLabel.textContent = labelValue;
+			}
+		}
+	}
+
+	self.getShortString = function(string, length) {
+		if (length==null) length = 30;
+		string = string!=null ? string.substr(0, length).replace(/\n/g, "") : "[String is null]";
+		return string;
+	}
+
+	self.getShortNumber = function(value, places) {
+		if (places==null || places<1) places = 4;
+		value = Math.round(value * Math.pow(10,places)) / Math.pow(10, places);
+		return value;
+	}
+
+	///////////////////////////////////////
+	// NAVIGATION CONTROLS
+	///////////////////////////////////////
+
+	self.updateViewLabel = function() {
+		var viewNavigationLabel = document.getElementById("ViewNavigationLabel");
+		var view = self.getVisibleView();
+		var viewIndex = view ? self.getViewIndex(view) : -1;
+		var viewName = view ? self.getViewPreferenceValue(view, self.prefix + "view-name") : null;
+		var viewId = view ? view.id : null;
+
+		if (viewNavigationLabel && view) {
+			if (viewName && viewName.indexOf('"')!=-1) {
+				viewName = viewName.replace(/"/g, "");
+			}
+
+			if (self.showViewName) {
+				viewNavigationLabel.textContent = viewName;
+				self.setTooltip(viewNavigationLabel, viewIndex + 1 + " of " + self.numberOfViews);
+			}
+			else {
+				viewNavigationLabel.textContent = viewIndex + 1 + " of " + self.numberOfViews;
+				self.setTooltip(viewNavigationLabel, viewName);
+			}
+
+		}
+	}
+
+	self.updateURL = function(view) {
+		view = view == null ? self.getVisibleView() : view;
+		var viewId = view ? view.id : null
+		var viewFragment = view ? "#"+ viewId : null;
+
+		if (viewId && self.viewIds.length>1 && self.enableDeepLinking) {
+
+			if (self.supportsPopState==false) {
+				self.setFragment(viewId);
+			}
+			else {
+				if (viewFragment!=window.location.hash) {
+
+					if (window.location.hash==null) {
+						window.history.replaceState({name:viewId}, null, viewFragment);
+					}
+					else {
+						window.history.pushState({name:viewId}, null, viewFragment);
+					}
+				}
+			}
+		}
+	}
+
+	self.updateURLState = function(view, stateName) {
+		stateName = view && (stateName=="" || stateName==null) ? self.getStateNameByViewId(view.id) : stateName;
+
+		if (self.supportsPopState==false) {
+			self.setFragment(stateName);
+		}
+		else {
+			if (stateName!=window.location.hash) {
+
+				if (window.location.hash==null) {
+					window.history.replaceState({name:view.viewId}, null, stateName);
+				}
+				else {
+					window.history.pushState({name:view.viewId}, null, stateName);
+				}
+			}
+		}
+	}
+
+	self.setFragment = function(value) {
+		window.location.hash = "#" + value;
+	}
+
+	self.setTooltip = function(element, value) {
+		// setting the tooltip in edge causes a page crash on hover
+		if (/Edge/.test(navigator.userAgent)) { return; }
+
+		if ("title" in element) {
+			element.title = value;
+		}
+	}
+
+	self.getStylesheetRules = function(styleSheet) {
+		try {
+			if (styleSheet) return styleSheet.cssRules || styleSheet.rules;
+	
+			return document.styleSheets[0]["cssRules"] || document.styleSheets[0]["rules"];
+		}
+		catch (error) {
+			// ERRORS:
+			// SecurityError: The operation is insecure.
+			// Errors happen when script loads before stylesheet or loading an external css locally
+
+			// InvalidAccessError: A parameter or an operation is not supported by the underlying object
+			// Place script after stylesheet
+
+			console.log(error);
+			if (error.toString().indexOf("The operation is insecure")!=-1) {
+				console.log("Load the stylesheet before the script or load the stylesheet inline until it can be loaded on a server")
+			}
+			return [];
+		}
+	}
+
+	/**
+	 * If single page application hide all of the views. 
+	 * @param {Number} selectedIndex if provided shows the view at index provided
+	 **/
+	self.hideViews = function(selectedIndex, animation) {
+		var rules = self.getStylesheetRules();
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+
+			if (rule.media!=null) {
+
+				if (queryIndex==selectedIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = selectedIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+				}
+				else {
+					if (animation) {
+						self.fadeOut(rule)
+					}
+					else {
+						self.disableMediaQuery(rule);
+					}
+				}
+				
+				queryIndex++;
+			}
+		}
+
+		self.numberOfViews = queryIndex;
+		self.updateViewLabel();
+		self.updateURL();
+
+		self.dispatchViewChange();
+
+		var view = self.getVisibleView();
+		var viewIndex = view ? self.getViewIndex(view) : -1;
+
+		return viewIndex==selectedIndex ? view : null;
+	}
+
+	/**
+	 * Hide view
+	 * @param {Object} view element to hide
+	 **/
+	self.hideView = function(view) {
+		var rule = view ? self.mediaQueryDictionary[view.id] : null;
+
+		if (rule) {
+			self.disableMediaQuery(rule);
+		}
+	}
+
+	/**
+	 * Hide overlay
+	 * @param {Object} overlay element to hide
+	 **/
+	self.hideOverlay = function(overlay) {
+		var rule = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+
+		if (rule) {
+			self.disableMediaQuery(rule);
+
+			//if (self.showByMediaQuery) {
+				overlay.style.display = "none";
+			//}
+		}
+	}
+
+	/**
+	 * Show the view by media query. Does not hide current views
+	 * Sets view options by default
+	 * @param {Object} view element to show
+	 * @param {Boolean} setViewOptions sets view options if null or true
+	 */
+	self.showViewByMediaQuery = function(view, setViewOptions) {
+		var id = view ? view.id : null;
+		var query = id ? self.mediaQueryDictionary[id] : null;
+		var isOverlay = view ? self.isOverlay(view) : false;
+		setViewOptions = setViewOptions==null ? true : setViewOptions;
+
+		if (query) {
+			self.enableMediaQuery(query);
+
+			if (isOverlay && view && setViewOptions) {
+				self.setViewVariables(null, view);
+			}
+			else {
+				if (view && setViewOptions) self.setViewOptions(view);
+				if (view && setViewOptions) self.setViewVariables(view);
+			}
+		}
+	}
+
+	/**
+	 * Show the view. Does not hide current views
+	 */
+	self.showView = function(view, setViewOptions) {
+		var id = view ? view.id : null;
+		var query = id ? self.mediaQueryDictionary[id] : null;
+		var display = null;
+		setViewOptions = setViewOptions==null ? true : setViewOptions;
+
+		if (query) {
+			self.enableMediaQuery(query);
+			if (view==null) view =self.getVisibleView();
+			if (view && setViewOptions) self.setViewOptions(view);
+		}
+		else if (id) {
+			display = window.getComputedStyle(view).getPropertyValue("display");
+			if (display=="" || display=="none") {
+				view.style.display = "block";
+			}
+		}
+
+		if (view) {
+			if (self.currentView!=null) {
+				self.lastView = self.currentView;
+			}
+
+			self.currentView = view;
+		}
+	}
+
+	self.showViewById = function(id, setViewOptions) {
+		var view = id ? self.getViewById(id) : null;
+
+		if (view) {
+			self.showView(view);
+			return;
+		}
+
+		self.log("View not found '" + id + "'");
+	}
+
+	self.getElementView = function(element) {
+		var view = element;
+		var viewFound = false;
+
+		while (viewFound==false || view==null) {
+			if (view && self.viewsDictionary[view.id]) {
+				return view;
+			}
+			view = view.parentNode;
+		}
+	}
+
+	/**
+	 * Show overlay over view
+	 * @param {Event | HTMLElement} event event or html element with styles applied
+	 * @param {String} id id of view or view reference
+	 * @param {Number} x x location
+	 * @param {Number} y y location
+	 */
+	self.showOverlay = function(event, id, x, y) {
+		var overlay = id && typeof id === 'string' ? self.getViewById(id) : id ? id : null;
+		var query = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+		var centerHorizontally = false;
+		var centerVertically = false;
+		var anchorLeft = false;
+		var anchorTop = false;
+		var anchorRight = false;
+		var anchorBottom = false;
+		var display = null;
+		var reparent = true;
+		var view = null;
+		
+		if (overlay==null || overlay==false) {
+			self.log("Overlay not found, '"+ id + "'");
+			return;
+		}
+
+		// get enter animation - event target must have css variables declared
+		if (event) {
+			var button = event.currentTarget || event; // can be event or htmlelement
+			var buttonComputedStyles = getComputedStyle(button);
+			var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
+			var animation = buttonComputedStyles.getPropertyValue(self.prefix+"animation").trim();
+			var isAnimated = animation!="";
+			var targetType = buttonComputedStyles.getPropertyValue(self.prefix+"action-type").trim();
+			var actionTarget = self.application ? null : self.getElement(actionTargetValue);
+			var actionTargetStyles = actionTarget ? actionTarget.style : null;
+
+			if (actionTargetStyles) {
+				actionTargetStyles.setProperty("animation", animation);
+			}
+
+			if ("stopImmediatePropagation" in event) {
+				event.stopImmediatePropagation();
+			}
+		}
+		
+		if (self.application==false || targetType=="page") {
+			document.location.href = "./" + actionTargetValue;
+			return;
+		}
+
+		// remove any current overlays
+		if (self.currentOverlay) {
+
+			// act as switch if same button
+			if (self.currentOverlay==actionTarget || self.currentOverlay==null) {
+				if (self.lastTrigger==button) {
+					self.removeOverlay(isAnimated);
+					return;
+				}
+			}
+			else {
+				self.removeOverlay(isAnimated);
+			}
+		}
+
+		if (reparent) {
+			view = self.getElementView(button);
+			if (view) {
+				view.appendChild(overlay);
+			}
+		}
+
+		if (query) {
+			//self.setElementAnimation(overlay, null);
+			//overlay.style.animation = animation;
+			self.enableMediaQuery(query);
+			
+			var display = overlay && overlay.style.display;
+			
+			if (overlay && display=="" || display=="none") {
+				overlay.style.display = "block";
+				//self.setViewOptions(overlay);
+			}
+
+			// add animation defined in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.fadeIn(overlay, false, animation);
+			}
+		}
+		else if (id) {
+
+			display = window.getComputedStyle(overlay).getPropertyValue("display");
+
+			if (display=="" || display=="none") {
+				overlay.style.display = "block";
+			}
+
+			// add animation defined in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.fadeIn(overlay, false, animation);
+			}
+		}
+
+		// do not set x or y position if centering
+		var horizontal = self.prefix + "center-horizontally";
+		var vertical = self.prefix + "center-vertically";
+		var style = overlay.style;
+		var transform = [];
+
+		centerHorizontally = self.getIsStyleDefined(id, horizontal) ? self.getViewPreferenceBoolean(overlay, horizontal) : false;
+		centerVertically = self.getIsStyleDefined(id, vertical) ? self.getViewPreferenceBoolean(overlay, vertical) : false;
+		anchorLeft = self.getIsStyleDefined(id, "left");
+		anchorRight = self.getIsStyleDefined(id, "right");
+		anchorTop = self.getIsStyleDefined(id, "top");
+		anchorBottom = self.getIsStyleDefined(id, "bottom");
+
+		
+		if (self.viewsDictionary[overlay.id] && self.viewsDictionary[overlay.id].styleDeclaration) {
+			style = self.viewsDictionary[overlay.id].styleDeclaration.style;
+		}
+		
+		if (centerHorizontally) {
+			style.left = "50%";
+			style.transformOrigin = "0 0";
+			transform.push("translateX(-50%)");
+		}
+		else if (anchorRight && anchorLeft) {
+			style.left = x + "px";
+		}
+		else if (anchorRight) {
+			//style.right = x + "px";
+		}
+		else {
+			style.left = x + "px";
+		}
+		
+		if (centerVertically) {
+			style.top = "50%";
+			transform.push("translateY(-50%)");
+			style.transformOrigin = "0 0";
+		}
+		else if (anchorTop && anchorBottom) {
+			style.top = y + "px";
+		}
+		else if (anchorBottom) {
+			//style.bottom = y + "px";
+		}
+		else {
+			style.top = y + "px";
+		}
+
+		if (transform.length) {
+			style.transform = transform.join(" ");
+		}
+
+		self.currentOverlay = overlay;
+		self.lastTrigger = button;
+	}
+
+	self.goBack = function() {
+		if (self.currentOverlay) {
+			self.removeOverlay();
+		}
+		else if (self.lastView) {
+			self.goToView(self.lastView.id);
+		}
+	}
+
+	self.removeOverlay = function(animate) {
+		var overlay = self.currentOverlay;
+		animate = animate===false ? false : true;
+
+		if (overlay) {
+			var style = overlay.style;
+			
+			if (style.animation && self.supportAnimations && animate) {
+				self.reverseAnimation(overlay, true);
+
+				var duration = self.getAnimationDuration(style.animation, true);
+		
+				setTimeout(function() {
+					self.setElementAnimation(overlay, null);
+					self.hideOverlay(overlay);
+					self.currentOverlay = null;
+				}, duration);
+			}
+			else {
+				self.setElementAnimation(overlay, null);
+				self.hideOverlay(overlay);
+				self.currentOverlay = null;
+			}
+		}
+	}
+
+	/**
+	 * Reverse the animation and hide after
+	 * @param {Object} target element with animation
+	 * @param {Boolean} hide hide after animation ends
+	 */
+	self.reverseAnimation = function(target, hide) {
+		var lastAnimation = null;
+		var style = target.style;
+
+		style.animationPlayState = "paused";
+		lastAnimation = style.animation;
+		style.animation = null;
+		style.animationPlayState = "paused";
+
+		if (hide) {
+			//target.addEventListener("animationend", self.animationEndHideHandler);
+	
+			var duration = self.getAnimationDuration(lastAnimation, true);
+			var isOverlay = self.isOverlay(target);
+	
+			setTimeout(function() {
+				self.setElementAnimation(target, null);
+
+				if (isOverlay) {
+					self.hideOverlay(target);
+				}
+				else {
+					self.hideView(target);
+				}
+			}, duration);
+		}
+
+		setTimeout(function() {
+			style.animation = lastAnimation;
+			style.animationPlayState = "paused";
+			style.animationDirection = "reverse";
+			style.animationPlayState = "running";
+		}, 30);
+	}
+
+	self.animationEndHandler = function(event) {
+		var target = event.currentTarget;
+		self.dispatchEvent(new Event(event.type));
+	}
+
+	self.isOverlay = function(view) {
+		var result = view ? self.getViewPreferenceBoolean(view, self.prefix + "is-overlay") : false;
+
+		return result;
+	}
+
+	self.animationEndHideHandler = function(event) {
+		var target = event.currentTarget;
+		self.setViewVariables(null, target);
+		self.hideView(target);
+		target.removeEventListener("animationend", self.animationEndHideHandler);
+	}
+
+	self.animationEndShowHandler = function(event) {
+		var target = event.currentTarget;
+		target.removeEventListener("animationend", self.animationEndShowHandler);
+	}
+
+	self.setViewOptions = function(view) {
+
+		if (view) {
+			self.minimumScale = self.getViewPreferenceValue(view, self.prefix + "minimum-scale");
+			self.maximumScale = self.getViewPreferenceValue(view, self.prefix + "maximum-scale");
+			self.scaleViewsToFit = self.getViewPreferenceBoolean(view, self.prefix + "scale-to-fit");
+			self.scaleToFitType = self.getViewPreferenceValue(view, self.prefix + "scale-to-fit-type");
+			self.scaleToFitOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix + "scale-on-double-click");
+			self.actualSizeOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix + "actual-size-on-double-click");
+			self.scaleViewsOnResize = self.getViewPreferenceBoolean(view, self.prefix + "scale-on-resize");
+			self.enableScaleUp = self.getViewPreferenceBoolean(view, self.prefix + "enable-scale-up");
+			self.centerHorizontally = self.getViewPreferenceBoolean(view, self.prefix + "center-horizontally");
+			self.centerVertically = self.getViewPreferenceBoolean(view, self.prefix + "center-vertically");
+			self.navigationOnKeypress = self.getViewPreferenceBoolean(view, self.prefix + "navigate-on-keypress");
+			self.showViewName = self.getViewPreferenceBoolean(view, self.prefix + "show-view-name");
+			self.refreshPageForChanges = self.getViewPreferenceBoolean(view, self.prefix + "refresh-for-changes");
+			self.refreshPageForChangesInterval = self.getViewPreferenceValue(view, self.prefix + "refresh-interval");
+			self.showNavigationControls = self.getViewPreferenceBoolean(view, self.prefix + "show-navigation-controls");
+			self.scaleViewSlider = self.getViewPreferenceBoolean(view, self.prefix + "show-scale-controls");
+			self.enableDeepLinking = self.getViewPreferenceBoolean(view, self.prefix + "enable-deep-linking");
+			self.singlePageApplication = self.getViewPreferenceBoolean(view, self.prefix + "application");
+			self.showByMediaQuery = self.getViewPreferenceBoolean(view, self.prefix + "show-by-media-query");
+			self.showUpdateNotification = document.cookie!="" ? document.cookie.indexOf(self.pageRefreshedName)!=-1 : false;
+			self.imageComparisonDuration = self.getViewPreferenceValue(view, self.prefix + "image-comparison-duration");
+			self.supportAnimations = self.getViewPreferenceBoolean(view, self.prefix + "enable-animations", true);
+
+			if (self.scaleViewsToFit) {
+				var newScaleValue = self.scaleViewToFit(view);
+				
+				if (newScaleValue<0) {
+					setTimeout(self.scaleViewToFit, 500, view);
+				}
+			}
+			else {
+				self.viewScale = self.getViewScaleValue(view);
+				self.viewToFitWidthScale = self.getViewFitToViewportWidthScale(view, self.enableScaleUp)
+				self.viewToFitHeightScale = self.getViewFitToViewportScale(view, self.enableScaleUp);
+				self.updateSliderValue(self.viewScale);
+			}
+
+			if (self.imageComparisonDuration!=null) {
+				// todo
+			}
+
+			if (self.refreshPageForChangesInterval!=null) {
+				self.refreshDuration = Number(self.refreshPageForChangesInterval);
+			}
+		}
+	}
+
+	self.previousView = function(event) {
+		var rules = self.getStylesheetRules();
+		var view = self.getVisibleView()
+		var index = view ? self.getViewIndex(view) : -1;
+		var prevQueryIndex = index!=-1 ? index-1 : self.currentQuery.index-1;
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+
+		if (event) {
+			event.stopImmediatePropagation();
+		}
+
+		if (prevQueryIndex<0) {
+			return;
+		}
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+			
+			if (rule.media!=null) {
+
+				if (queryIndex==prevQueryIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = prevQueryIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+					self.updateViewLabel();
+					self.updateURL();
+					self.dispatchViewChange();
+				}
+				else {
+					self.disableMediaQuery(rule);
+				}
+
+				queryIndex++;
+			}
+		}
+	}
+
+	self.nextView = function(event) {
+		var rules = self.getStylesheetRules();
+		var view = self.getVisibleView();
+		var index = view ? self.getViewIndex(view) : -1;
+		var nextQueryIndex = index!=-1 ? index+1 : self.currentQuery.index+1;
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+		var numberOfMediaQueries = self.getNumberOfMediaRules();
+
+		if (event) {
+			event.stopImmediatePropagation();
+		}
+
+		if (nextQueryIndex>=numberOfMediaQueries) {
+			return;
+		}
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+			
+			if (rule.media!=null) {
+
+				if (queryIndex==nextQueryIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = nextQueryIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+					self.updateViewLabel();
+					self.updateURL();
+					self.dispatchViewChange();
+				}
+				else {
+					self.disableMediaQuery(rule);
+				}
+
+				queryIndex++;
+			}
+		}
+	}
+
+	/**
+	 * Enables a view via media query
+	 */
+	self.enableMediaQuery = function(rule) {
+
+		try {
+			rule.media.mediaText = self.inclusionQuery;
+		}
+		catch(error) {
+			//self.log(error);
+			rule.conditionText = self.inclusionQuery;
+		}
+	}
+
+	self.disableMediaQuery = function(rule) {
+
+		try {
+			rule.media.mediaText = self.exclusionQuery;
+		}
+		catch(error) {
+			rule.conditionText = self.exclusionQuery;
+		}
+	}
+
+	self.dispatchViewChange = function() {
+		try {
+			var event = new Event(self.NAVIGATION_CHANGE);
+			window.dispatchEvent(event);
+		}
+		catch (error) {
+			// In IE 11: Object doesn't support this action
+		}
+	}
+
+	self.getNumberOfMediaRules = function() {
+		var rules = self.getStylesheetRules();
+		var numberOfRules = rules ? rules.length : 0;
+		var numberOfQueries = 0;
+
+		for (var i=0;i<numberOfRules;i++) {
+			if (rules[i].media!=null) { numberOfQueries++; }
+		}
+		
+		return numberOfQueries;
+	}
+
+	/////////////////////////////////////////
+	// VIEW SCALE 
+	/////////////////////////////////////////
+
+	self.sliderChangeHandler = function(event) {
+		var value = self.getShortNumber(event.currentTarget.value/100);
+		var view = self.getVisibleView();
+		self.setViewScaleValue(view, false, value, true);
+	}
+
+	self.updateSliderValue = function(scale) {
+		var slider = document.getElementById(self.viewScaleSliderId);
+		var tooltip = parseInt(scale * 100 + "") + "%";
+		var inputType;
+		var inputValue;
+		
+		if (slider) {
+			inputValue = self.getShortNumber(scale * 100);
+			if (inputValue!=slider["value"]) {
+				slider["value"] = inputValue;
+			}
+			inputType = slider.getAttributeNS(null, "type");
+
+			if (inputType!="range") {
+				// input range is not supported
+				slider.style.display = "none";
+			}
+
+			self.setTooltip(slider, tooltip);
+		}
+	}
+
+	self.viewChangeHandler = function(event) {
+		var view = self.getVisibleView();
+		var matrix = view ? getComputedStyle(view).transform : null;
+		
+		if (matrix) {
+			self.viewScale = self.getViewScaleValue(view);
+			
+			var scaleNeededToFit = self.getViewFitToViewportScale(view);
+			var isViewLargerThanViewport = scaleNeededToFit<1;
+			
+			// scale large view to fit if scale to fit is enabled
+			if (self.scaleViewsToFit) {
+				self.scaleViewToFit(view);
+			}
+			else {
+				self.updateSliderValue(self.viewScale);
+			}
+		}
+	}
+
+	self.getViewScaleValue = function(view) {
+		var matrix = getComputedStyle(view).transform;
+
+		if (matrix) {
+			var matrixArray = matrix.replace("matrix(", "").split(",");
+			var scaleX = parseFloat(matrixArray[0]);
+			var scaleY = parseFloat(matrixArray[3]);
+			var scale = Math.min(scaleX, scaleY);
+		}
+
+		return scale;
+	}
+
+	/**
+	 * Scales view to scale. 
+	 * @param {Object} view view to scale. views are in views array
+	 * @param {Boolean} scaleToFit set to true to scale to fit. set false to use desired scale value
+	 * @param {Number} desiredScale scale to define. not used if scale to fit is false
+	 * @param {Boolean} isSliderChange indicates if slider is callee
+	 */
+	self.setViewScaleValue = function(view, scaleToFit, desiredScale, isSliderChange) {
+		var enableScaleUp = self.enableScaleUp;
+		var scaleToFitType = self.scaleToFitType;
+		var minimumScale = self.minimumScale;
+		var maximumScale = self.maximumScale;
+		var hasMinimumScale = !isNaN(minimumScale) && minimumScale!="";
+		var hasMaximumScale = !isNaN(maximumScale) && maximumScale!="";
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, enableScaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, enableScaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, enableScaleUp);
+		var scaleToFitFull = self.getViewFitToViewportScale(view, true);
+		var scaleToFitFullWidth = self.getViewFitToViewportWidthScale(view, true);
+		var scaleToFitFullHeight = self.getViewFitToViewportHeightScale(view, true);
+		var scaleToWidth = scaleToFitType=="width";
+		var scaleToHeight = scaleToFitType=="height";
+		var shrunkToFit = false;
+		var topPosition = null;
+		var leftPosition = null;
+		var translateY = null;
+		var translateX = null;
+		var transformValue = "";
+		var canCenterVertically = true;
+		var canCenterHorizontally = true;
+		var style = view.style;
+
+		if (view && self.viewsDictionary[view.id] && self.viewsDictionary[view.id].styleDeclaration) {
+			style = self.viewsDictionary[view.id].styleDeclaration.style;
+		}
+
+		if (scaleToFit && isSliderChange!=true) {
+			if (scaleToFitType=="fit" || scaleToFitType=="") {
+				desiredScale = scaleNeededToFit;
+			}
+			else if (scaleToFitType=="width") {
+				desiredScale = scaleNeededToFitWidth;
+			}
+			else if (scaleToFitType=="height") {
+				desiredScale = scaleNeededToFitHeight;
+			}
+		}
+		else {
+			if (isNaN(desiredScale)) {
+				desiredScale = 1;
+			}
+		}
+
+		self.updateSliderValue(desiredScale);
+		
+		// scale to fit width
+		if (scaleToWidth && scaleToHeight==false) {
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			canCenterHorizontally = scaleNeededToFitWidth>=1 && enableScaleUp==false;
+
+			if (isSliderChange) {
+				canCenterHorizontally = desiredScale<scaleToFitFullWidth;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFitWidth;
+			}
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "width", enableScaleUp, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "width", enableScaleUp, desiredScale, minimumScale, maximumScale);
+
+			if (desiredScale>1 && (enableScaleUp || isSliderChange)) {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+			else if (desiredScale>=1 && enableScaleUp==false) {
+				transformValue = "scale(" + 1 + ")";
+			}
+			else {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			return desiredScale;
+		}
+
+		// scale to fit height
+		if (scaleToHeight && scaleToWidth==false) {
+			//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			//canCenterHorizontally = scaleNeededToFitHeight<=scaleNeededToFitWidth && enableScaleUp==false;
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			canCenterHorizontally = scaleNeededToFitWidth>=1 && enableScaleUp==false;
+			
+			if (isSliderChange) {
+				canCenterHorizontally = desiredScale<scaleToFitFullHeight;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFitHeight;
+			}
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+				//canCenterVertically = desiredScale>=scaleNeededToFitHeight && enableScaleUp==false;
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "height", enableScaleUp, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "height", enableScaleUp, desiredScale, minimumScale, maximumScale);
+
+			if (desiredScale>1 && (enableScaleUp || isSliderChange)) {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+			else if (desiredScale>=1 && enableScaleUp==false) {
+				transformValue = "scale(" + 1 + ")";
+			}
+			else {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			return scaleNeededToFitHeight;
+		}
+
+		if (scaleToFitType=="fit") {
+			//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			//canCenterHorizontally = scaleNeededToFitWidth>=scaleNeededToFitHeight;
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFit;
+			canCenterHorizontally = scaleNeededToFitWidth>=scaleNeededToFit;
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			if (isSliderChange || scaleToFit==false) {
+				canCenterVertically = scaleToFitFullHeight>=desiredScale;
+				canCenterHorizontally = desiredScale<scaleToFitFullWidth;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFit;
+			}
+
+			transformValue = "scale(" + desiredScale + ")";
+
+			//canCenterHorizontally = self.canCenterHorizontally(view, "fit", false, desiredScale);
+			//canCenterVertically = self.canCenterVertically(view, "fit", false, desiredScale);
+			
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			self.updateSliderValue(desiredScale);
+			
+			return desiredScale;
+		}
+
+		if (scaleToFitType=="default" || scaleToFitType=="") {
+			desiredScale = 1;
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+			}
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "none", false, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "none", false, desiredScale, minimumScale, maximumScale);
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+				else {
+					transformValue += " translateX(" + 0 + ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			self.updateSliderValue(desiredScale);
+			
+			return desiredScale;
+		}
+	}
+
+	/**
+	 * Returns true if view can be centered horizontally
+	 * @param {HTMLElement} view view
+	 * @param {String} type type of scaling - width, height, all, none
+	 * @param {Boolean} scaleUp if scale up enabled 
+	 * @param {Number} scale target scale value 
+	 */
+	self.canCenterHorizontally = function(view, type, scaleUp, scale, minimumScale, maximumScale) {
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+		var canCenter = false;
+		var minScale;
+
+		type = type==null ? "none" : type;
+		scale = scale==null ? scale : scaleNeededToFitWidth;
+		scaleUp = scaleUp == null ? false : scaleUp;
+
+		if (type=="width") {
+	
+			if (scaleUp && maximumScale==null) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=1) {
+				canCenter = true;
+			}
+		}
+		else if (type=="height") {
+			minScale = Math.min(1, scaleNeededToFitHeight);
+			if (minimumScale!="" && maximumScale!="") {
+				minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+			}
+			else {
+				if (minimumScale!="") {
+					minScale = Math.max(minimumScale, scaleNeededToFitHeight);
+				}
+				if (maximumScale!="") {
+					minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+				}
+			}
+	
+			if (scaleUp && maximumScale=="") {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=minScale) {
+				canCenter = true;
+			}
+		}
+		else if (type=="fit") {
+			canCenter = scaleNeededToFitWidth>=scaleNeededToFit;
+		}
+		else {
+			if (scaleUp) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=1) {
+				canCenter = true;
+			}
+		}
+
+		self.horizontalScrollbarsNeeded = canCenter;
+		
+		return canCenter;
+	}
+
+	/**
+	 * Returns true if view can be centered horizontally
+	 * @param {HTMLElement} view view to scale
+	 * @param {String} type type of scaling
+	 * @param {Boolean} scaleUp if scale up enabled 
+	 * @param {Number} scale target scale value 
+	 */
+	self.canCenterVertically = function(view, type, scaleUp, scale, minimumScale, maximumScale) {
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+		var canCenter = false;
+		var minScale;
+
+		type = type==null ? "none" : type;
+		scale = scale==null ? 1 : scale;
+		scaleUp = scaleUp == null ? false : scaleUp;
+	
+		if (type=="width") {
+			canCenter = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+		}
+		else if (type=="height") {
+			minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFit));
+			canCenter = scaleNeededToFitHeight>=minScale;
+		}
+		else if (type=="fit") {
+			canCenter = scaleNeededToFitHeight>=scaleNeededToFit;
+		}
+		else {
+			if (scaleUp) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitHeight>=1) {
+				canCenter = true;
+			}
+		}
+
+		self.verticalScrollbarsNeeded = canCenter;
+		
+		return canCenter;
+	}
+
+	self.getViewFitToViewportScale = function(view, scaleUp) {
+		var enableScaleUp = scaleUp;
+		var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+		var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementWidth) || isNaN(elementHeight)) {
+			return newScale;
+		}
+
+		availableWidth -= self.horizontalPadding;
+		availableHeight -= self.verticalPadding;
+
+		if (enableScaleUp) {
+			newScale = Math.min(availableHeight/elementHeight, availableWidth/elementWidth);
+		}
+		else if (elementWidth > availableWidth || elementHeight > availableHeight) {
+			newScale = Math.min(availableHeight/elementHeight, availableWidth/elementWidth);
+		}
+		
+		return newScale;
+	}
+
+	self.getViewFitToViewportWidthScale = function(view, scaleUp) {
+		// need to get browser viewport width when element
+		var isParentWindow = view && view.parentNode && view.parentNode===document.body;
+		var enableScaleUp = scaleUp;
+		var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementWidth)) {
+			return newScale;
+		}
+
+		availableWidth -= self.horizontalPadding;
+
+		if (enableScaleUp) {
+			newScale = availableWidth/elementWidth;
+		}
+		else if (elementWidth > availableWidth) {
+			newScale = availableWidth/elementWidth;
+		}
+		
+		return newScale;
+	}
+
+	self.getViewFitToViewportHeightScale = function(view, scaleUp) {
+		var enableScaleUp = scaleUp;
+		var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementHeight)) {
+			return newScale;
+		}
+
+		availableHeight -= self.verticalPadding;
+
+		if (enableScaleUp) {
+			newScale = availableHeight/elementHeight;
+		}
+		else if (elementHeight > availableHeight) {
+			newScale = availableHeight/elementHeight;
+		}
+		
+		return newScale;
+	}
+
+	self.keypressHandler = function(event) {
+		var rightKey = 39;
+		var leftKey = 37;
+		
+		// listen for both events 
+		if (event.type=="keypress") {
+			window.removeEventListener("keyup", self.keypressHandler);
+		}
+		else {
+			window.removeEventListener("keypress", self.keypressHandler);
+		}
+		
+		if (self.showNavigationControls) {
+			if (self.navigationOnKeypress) {
+				if (event.keyCode==rightKey) {
+					self.nextView();
+				}
+				if (event.keyCode==leftKey) {
+					self.previousView();
+				}
+			}
+		}
+		else if (self.navigationOnKeypress) {
+			if (event.keyCode==rightKey) {
+				self.nextView();
+			}
+			if (event.keyCode==leftKey) {
+				self.previousView();
+			}
+		}
+	}
+
+	///////////////////////////////////
+	// GENERAL FUNCTIONS
+	///////////////////////////////////
+
+	self.getViewById = function(id) {
+		id = id ? id.replace("#", "") : "";
+		var view = self.viewIds.indexOf(id)!=-1 && self.getElement(id);
+		return view;
+	}
+
+	self.getViewIds = function() {
+		var viewIds = self.getViewPreferenceValue(document.body, self.prefix + "view-ids");
+		var viewId = null;
+
+		viewIds = viewIds!=null && viewIds!="" ? viewIds.split(",") : [];
+
+		if (viewIds.length==0) {
+			viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+			viewIds = viewId ? [viewId] : [];
+		}
+
+		return viewIds;
+	}
+
+	self.getInitialViewId = function() {
+		var viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+		return viewId;
+	}
+
+	self.getApplicationStylesheet = function() {
+		var stylesheetId = self.getViewPreferenceValue(document.body, self.prefix + "stylesheet-id");
+		self.applicationStylesheet = document.getElementById("applicationStylesheet");
+		return self.applicationStylesheet.sheet;
+	}
+
+	self.getVisibleView = function() {
+		var viewIds = self.getViewIds();
+		
+		for (var i=0;i<viewIds.length;i++) {
+			var viewId = viewIds[i].replace(/[\#?\.?](.*)/, "$" + "1");
+			var view = self.getElement(viewId);
+			var postName = "_Class";
+
+			if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+				view = self.getElement(viewId.replace(postName, ""));
+			}
+			
+			if (view) {
+				var display = getComputedStyle(view).display;
+		
+				if (display=="block" || display=="flex") {
+					return view;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	self.getVisibleViews = function() {
+		var viewIds = self.getViewIds();
+		var views = [];
+		
+		for (var i=0;i<viewIds.length;i++) {
+			var viewId = viewIds[i].replace(/[\#?\.?](.*)/, "$" + "1");
+			var view = self.getElement(viewId);
+			var postName = "_Class";
+
+			if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+				view = self.getElement(viewId.replace(postName, ""));
+			}
+			
+			if (view) {
+				var display = getComputedStyle(view).display;
+				
+				if (display=="none") {
+					continue;
+				}
+
+				if (display=="block" || display=="flex") {
+					views.push(view);
+				}
+			}
+		}
+
+		return views;
+	}
+
+	self.getStateNameByViewId = function(id) {
+		var state = self.viewsDictionary[id];
+		return state && state.stateName;
+	}
+
+	self.getMatchingViews = function(ids) {
+		var views = self.addedViews.slice(0);
+		var matchingViews = [];
+
+		if (self.showByMediaQuery) {
+			for (let index = 0; index < views.length; index++) {
+				var viewId = views[index];
+				var state = self.viewsDictionary[viewId];
+				var rule = state && state.rule; 
+				var matchResults = window.matchMedia(rule.conditionText);
+				var view = self.views[viewId];
+				
+				if (matchResults.matches) {
+					if (ids==true) {
+						matchingViews.push(viewId);
+					}
+					else {
+						matchingViews.push(view);
+					}
+				}
+			}
+		}
+
+		return matchingViews;
+	}
+
+	self.ruleMatchesQuery = function(rule) {
+		var result = window.matchMedia(rule.conditionText);
+		return result.matches;
+	}
+
+	self.getViewsByStateName = function(stateName, matchQuery) {
+		var views = self.addedViews.slice(0);
+		var matchingViews = [];
+
+		if (self.showByMediaQuery) {
+
+			// find state name
+			for (let index = 0; index < views.length; index++) {
+				var viewId = views[index];
+				var state = self.viewsDictionary[viewId];
+				var rule = state.rule;
+				var mediaRule = state.mediaRule;
+				var view = self.views[viewId];
+				var viewStateName = self.getStyleRuleValue(mediaRule, self.STATE_NAME, state);
+				var stateFoundAtt = view.getAttribute(self.STATE_NAME)==state;
+				var matchesResults = false;
+				
+				if (viewStateName==stateName) {
+					if (matchQuery) {
+						matchesResults = self.ruleMatchesQuery(rule);
+
+						if (matchesResults) {
+							matchingViews.push(view);
+						}
+					}
+					else {
+						matchingViews.push(view);
+					}
+				}
+			}
+		}
+
+		return matchingViews;
+	}
+
+	self.getInitialView = function() {
+		var viewId = self.getInitialViewId();
+		viewId = viewId.replace(/[\#?\.?](.*)/, "$" + "1");
+		var view = self.getElement(viewId);
+		var postName = "_Class";
+
+		if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+			view = self.getElement(viewId.replace(postName, ""));
+		}
+
+		return view;
+	}
+
+	self.getViewIndex = function(view) {
+		var viewIds = self.getViewIds();
+		var id = view ? view.id : null;
+		var index = id && viewIds ? viewIds.indexOf(id) : -1;
+
+		return index;
+	}
+
+	self.syncronizeViewToURL = function() {
+		var fragment = self.getHashFragment();
+
+		if (self.showByMediaQuery) {
+			var stateName = fragment;
+			
+			if (stateName==null || stateName=="") {
+				var initialView = self.getInitialView();
+				stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+			}
+			
+			self.showMediaQueryViewsByState(stateName);
+			return;
+		}
+
+		var view = self.getViewById(fragment);
+		var index = view ? self.getViewIndex(view) : 0;
+		if (index==-1) index = 0;
+		var currentView = self.hideViews(index);
+
+		if (self.supportsPopState && currentView) {
+
+			if (fragment==null) {
+				window.history.replaceState({name:currentView.id}, null, "#"+ currentView.id);
+			}
+			else {
+				window.history.pushState({name:currentView.id}, null, "#"+ currentView.id);
+			}
+		}
+		
+		self.setViewVariables(view);
+		return view;
+	}
+
+	/**
+	 * Set the currentView or currentOverlay properties and set the lastView or lastOverlay properties
+	 */
+	self.setViewVariables = function(view, overlay, parentView) {
+		if (view) {
+			if (self.currentView) {
+				self.lastView = self.currentView;
+			}
+			self.currentView = view;
+		}
+
+		if (overlay) {
+			if (self.currentOverlay) {
+				self.lastOverlay = self.currentOverlay;
+			}
+			self.currentOverlay = overlay;
+		}
+	}
+
+	self.getViewPreferenceBoolean = function(view, property, altValue) {
+		var computedStyle = window.getComputedStyle(view);
+		var value = computedStyle.getPropertyValue(property);
+		var type = typeof value;
+		
+		if (value=="true" || (type=="string" && value.indexOf("true")!=-1)) {
+			return true;
+		}
+		else if (value=="" && arguments.length==3) {
+			return altValue;
+		}
+
+		return false;
+	}
+
+	self.getViewPreferenceValue = function(view, property, defaultValue) {
+		var value = window.getComputedStyle(view).getPropertyValue(property);
+
+		if (value===undefined) {
+			return defaultValue;
+		}
+		
+		value = value.replace(/^[\s\"]*/, "");
+		value = value.replace(/[\s\"]*$/, "");
+		value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) { 
+			return capture;
+		});
+
+		return value;
+	}
+
+	self.getStyleRuleValue = function(cssRule, property) {
+		var value = cssRule ? cssRule.style.getPropertyValue(property) : null;
+
+		if (value===undefined) {
+			return null;
+		}
+		
+		value = value.replace(/^[\s\"]*/, "");
+		value = value.replace(/[\s\"]*$/, "");
+		value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) { 
+			return capture;
+		});
+
+		return value;
+	}
+
+	/**
+	 * Get the first defined value of property. Returns empty string if not defined
+	 * @param {String} id id of element
+	 * @param {String} property 
+	 */
+	self.getCSSPropertyValueForElement = function(id, property) {
+		var styleSheets = document.styleSheets;
+		var numOfStylesheets = styleSheets.length;
+		var values = [];
+		var selectorIDText = "#" + id;
+		var selectorClassText = "." + id + "_Class";
+		var value;
+
+		for(var i=0;i<numOfStylesheets;i++) {
+			var styleSheet = styleSheets[i];
+			var cssRules = self.getStylesheetRules(styleSheet);
+			var numOfCSSRules = cssRules.length;
+			var cssRule;
+			
+			for (var j=0;j<numOfCSSRules;j++) {
+				cssRule = cssRules[j];
+				
+				if (cssRule.media) {
+					var mediaRules = cssRule.cssRules;
+					var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+					
+					for(var k=0;k<numOfMediaRules;k++) {
+						var mediaRule = mediaRules[k];
+						
+						if (mediaRule.selectorText==selectorIDText || mediaRule.selectorText==selectorClassText) {
+							
+							if (mediaRule.style && mediaRule.style.getPropertyValue(property)!="") {
+								value = mediaRule.style.getPropertyValue(property);
+								values.push(value);
+							}
+						}
+					}
+				}
+				else {
+
+					if (cssRule.selectorText==selectorIDText || cssRule.selectorText==selectorClassText) {
+						if (cssRule.style && cssRule.style.getPropertyValue(property)!="") {
+							value = cssRule.style.getPropertyValue(property);
+							values.push(value);
+						}
+					}
+				}
+			}
+		}
+
+		return values.pop();
+	}
+
+	self.getIsStyleDefined = function(id, property) {
+		var value = self.getCSSPropertyValueForElement(id, property);
+		return value!==undefined && value!="";
+	}
+
+	self.collectViews = function() {
+		var viewIds = self.getViewIds();
+
+		for (let index = 0; index < viewIds.length; index++) {
+			const id = viewIds[index];
+			const view = self.getElement(id);
+			self.views[id] = view;
+		}
+		
+		self.viewIds = viewIds;
+	}
+
+	self.collectOverlays = function() {
+		var viewIds = self.getViewIds();
+		var ids = [];
+
+		for (let index = 0; index < viewIds.length; index++) {
+			const id = viewIds[index];
+			const view = self.getViewById(id);
+			const isOverlay = view && self.isOverlay(view);
+			
+			if (isOverlay) {
+				ids.push(id);
+				self.overlays[id] = view;
+			}
+		}
+		
+		self.overlayIds = ids;
+	}
+
+	self.collectMediaQueries = function() {
+		var viewIds = self.getViewIds();
+		var styleSheet = self.getApplicationStylesheet();
+		var cssRules = self.getStylesheetRules(styleSheet);
+		var numOfCSSRules = cssRules ? cssRules.length : 0;
+		var cssRule;
+		var id = viewIds.length ? viewIds[0]: ""; // single view
+		var selectorIDText = "#" + id;
+		var selectorClassText = "." + id + "_Class";
+		var viewsNotFound = viewIds.slice();
+		var viewsFound = [];
+		var selectorText = null;
+		var property = self.prefix + "view-id";
+		var stateName = self.prefix + "state";
+		var stateValue;
+		
+		for (var j=0;j<numOfCSSRules;j++) {
+			cssRule = cssRules[j];
+			
+			if (cssRule.media) {
+				var mediaRules = cssRule.cssRules;
+				var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+				var mediaViewInfoFound = false;
+				var mediaId = null;
+				
+				for(var k=0;k<numOfMediaRules;k++) {
+					var mediaRule = mediaRules[k];
+
+					selectorText = mediaRule.selectorText;
+					
+					if (selectorText==".mediaViewInfo" && mediaViewInfoFound==false) {
+
+						mediaId = self.getStyleRuleValue(mediaRule, property);
+						stateValue = self.getStyleRuleValue(mediaRule, stateName);
+
+						selectorIDText = "#" + mediaId;
+						selectorClassText = "." + mediaId + "_Class";
+						
+						// prevent duplicates from load and domcontentloaded events
+						if (self.addedViews.indexOf(mediaId)==-1) {
+							self.addView(mediaId, cssRule, mediaRule, stateValue);
+						}
+
+						viewsFound.push(mediaId);
+
+						if (viewsNotFound.indexOf(mediaId)!=-1) {
+							viewsNotFound.splice(viewsNotFound.indexOf(mediaId));
+						}
+
+						mediaViewInfoFound = true;
+					}
+
+					if (selectorIDText==selectorText || selectorClassText==selectorText) {
+						var styleObject = self.viewsDictionary[mediaId];
+						if (styleObject) {
+							styleObject.styleDeclaration = mediaRule;
+						}
+						break;
+					}
+				}
+			}
+			else {
+				selectorText = cssRule.selectorText.replace(/[#|\s|*]?/g, "");
+
+				if (viewIds.indexOf(selectorText)!=-1) {
+					self.addView(selectorText, cssRule, null, stateValue);
+
+					if (viewsNotFound.indexOf(selectorText)!=-1) {
+						viewsNotFound.splice(viewsNotFound.indexOf(selectorText));
+					}
+
+					break;
+				}
+			}
+		}
+
+		if (viewsNotFound.length) {
+			console.log("Could not find the following views:" + viewsNotFound.join(",") + "");
+			console.log("Views found:" + viewsFound.join(",") + "");
+		}
+	}
+
+	/**
+	 * Adds a view. A view object contains the id of the view and the style rule
+	 * Use enableMediaQuery(rule) to enable
+	 * An array of view names are in self.addedViews array
+	 */
+	self.addView = function(viewId, cssRule, mediaRule, stateName) {
+		var state = {name:viewId, rule:cssRule, id:viewId, mediaRule:mediaRule, stateName:stateName};
+		self.addedViews.push(viewId);
+		self.viewsDictionary[viewId] = state;
+		self.mediaQueryDictionary[viewId] = cssRule;
+	}
+
+	self.hasView = function(name) {
+
+		if (self.addedViews.indexOf(name)!=-1) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Go to view by id. Views are added in addView()
+	 * @param {String} id id of view in current
+	 * @param {Boolean} maintainPreviousState if true then do not hide other views
+	 * @param {String} parent id of parent view
+	 */
+	self.goToView = function(id, maintainPreviousState, parent) {
+		var state = self.viewsDictionary[id];
+
+		if (state) {
+			if (maintainPreviousState==false || maintainPreviousState==null) {
+				self.hideViews();
+			}
+			self.enableMediaQuery(state.rule);
+			self.updateViewLabel();
+			self.updateURL();
+		}
+		else {
+			var event = new Event(self.STATE_NOT_FOUND);
+			self.stateName = id;
+			window.dispatchEvent(event);
+		}
+	}
+
+	/**
+	 * Go to the view in the event targets CSS variable
+	 */
+	self.goToTargetView = function(event) {
+		var button = event.currentTarget;
+		var buttonComputedStyles = getComputedStyle(button);
+		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
+		var animation = buttonComputedStyles.getPropertyValue(self.prefix+"animation").trim();
+		var targetType = buttonComputedStyles.getPropertyValue(self.prefix+"action-type").trim();
+		var targetView = self.application ? null : self.getElement(actionTargetValue);
+		var targetState = targetView ? self.getStateNameByViewId(targetView.id) : null;
+		var actionTargetStyles = targetView ? targetView.style : null;
+		var state = self.viewsDictionary[actionTargetValue];
+		
+		// navigate to page
+		if (self.application==false || targetType=="page") {
+			document.location.href = "./" + actionTargetValue;
+			return;
+		}
+
+		// if view is found
+		if (targetView) {
+
+			if (self.currentOverlay) {
+				self.removeOverlay(false);
+			}
+
+			if (self.showByMediaQuery) {
+				var stateName = targetState;
+				
+				if (stateName==null || stateName=="") {
+					var initialView = self.getInitialView();
+					stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+				}
+				self.showMediaQueryViewsByState(stateName, event);
+				return;
+			}
+
+			// add animation set in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.crossFade(self.currentView, targetView, false, animation);
+			}
+			else {
+				self.setViewVariables(self.currentView);
+				self.hideViews();
+				self.enableMediaQuery(state.rule);
+				self.scaleViewIfNeeded(targetView);
+				self.centerView(targetView);
+				self.updateViewLabel();
+				self.updateURL();
+			}
+		}
+		else {
+			var stateEvent = new Event(self.STATE_NOT_FOUND);
+			self.stateName = name;
+			window.dispatchEvent(stateEvent);
+		}
+
+		event.stopImmediatePropagation();
+	}
+
+	/**
+	 * Cross fade between views
+	 **/
+	self.crossFade = function(from, to, update, animation) {
+		var targetIndex = to.parentNode
+		var fromIndex = Array.prototype.slice.call(from.parentElement.children).indexOf(from);
+		var toIndex = Array.prototype.slice.call(to.parentElement.children).indexOf(to);
+
+		if (from.parentNode==to.parentNode) {
+			var reverse = self.getReverseAnimation(animation);
+			var duration = self.getAnimationDuration(animation, true);
+
+			// if target view is above (higher index)
+			// then fade in target view 
+			// and after fade in then hide previous view instantly
+			if (fromIndex<toIndex) {
+				self.setElementAnimation(from, null);
+				self.setElementAnimation(to, null);
+				self.showViewByMediaQuery(to);
+				self.fadeIn(to, update, animation);
+
+				setTimeout(function() {
+					self.setElementAnimation(to, null);
+					self.setElementAnimation(from, null);
+					self.hideView(from);
+					self.updateURL();
+					self.setViewVariables(to);
+					self.updateViewLabel();
+				}, duration)
+			}
+			// if target view is on bottom
+			// then show target view instantly 
+			// and fade out current view
+			else if (fromIndex>toIndex) {
+				self.setElementAnimation(to, null);
+				self.setElementAnimation(from, null);
+				self.showViewByMediaQuery(to);
+				self.fadeOut(from, update, reverse);
+
+				setTimeout(function() {
+					self.setElementAnimation(to, null);
+					self.setElementAnimation(from, null);
+					self.hideView(from);
+					self.updateURL();
+					self.setViewVariables(to);
+				}, duration)
+			}
+		}
+	}
+
+	self.fadeIn = function(element, update, animation) {
+		self.showViewByMediaQuery(element);
+
+		if (update) {
+			self.updateURL(element);
+
+			element.addEventListener("animationend", function(event) {
+				element.style.animation = null;
+				self.setViewVariables(element);
+				self.updateViewLabel();
+				element.removeEventListener("animationend", arguments.callee);
+			});
+		}
+
+		self.setElementAnimation(element, null);
+		
+		element.style.animation = animation;
+	}
+
+	self.fadeOutCurrentView = function(animation, update) {
+		if (self.currentView) {
+			self.fadeOut(self.currentView, update, animation);
+		}
+		if (self.currentOverlay) {
+			self.fadeOut(self.currentOverlay, update, animation);
+		}
+	}
+
+	self.fadeOut = function(element, update, animation) {
+		if (update) {
+			element.addEventListener("animationend", function(event) {
+				element.style.animation = null;
+				self.hideView(element);
+				element.removeEventListener("animationend", arguments.callee);
+			});
+		}
+
+		element.style.animationPlayState = "paused";
+		element.style.animation = animation;
+		element.style.animationPlayState = "running";
+	}
+
+	self.getReverseAnimation = function(animation) {
+		if (animation && animation.indexOf("reverse")==-1) {
+			animation += " reverse";
+		}
+
+		return animation;
+	}
+
+	/**
+	 * Get duration in animation string
+	 * @param {String} animation animation value
+	 * @param {Boolean} inMilliseconds length in milliseconds if true
+	 */
+	self.getAnimationDuration = function(animation, inMilliseconds) {
+		var duration = 0;
+		var expression = /.+(\d\.\d)s.+/;
+
+		if (animation && animation.match(expression)) {
+			duration = parseFloat(animation.replace(expression, "$" + "1"));
+			if (duration && inMilliseconds) duration = duration * 1000;
+		}
+
+		return duration;
+	}
+
+	self.setElementAnimation = function(element, animation, priority) {
+		element.style.setProperty("animation", animation, "important");
+	}
+
+	self.getElement = function(id) {
+		var elementId = id ? id.trim() : id;
+		var element = elementId ? document.getElementById(elementId) : null;
+
+		return element;
+	}
+
+	self.resizeHandler = function(event) {
+		
+		if (self.showByMediaQuery) {
+			if (self.enableDeepLinking) {
+				var stateName = self.getHashFragment();
+
+				if (stateName==null || stateName=="") {
+					var initialView = self.getInitialView();
+					stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+				}
+				self.showMediaQueryViewsByState(stateName, event);
+			}
+		}
+		else {
+			var visibleViews = self.getVisibleViews();
+
+			for (let index = 0; index < visibleViews.length; index++) {	
+				self.scaleViewIfNeeded();
+			}
+		}
+
+		window.dispatchEvent(new Event(self.APPLICATION_RESIZE));
+	}
+
+	self.scaleViewIfNeeded = function(view) {
+
+		if (self.scaleViewsOnResize) {
+			if (view==null) {
+				view = self.getVisibleView();
+			}
+
+			var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME)=="false" ? false : true;
+
+			if (isViewScaled) {
+				self.scaleViewToFit(view, true);
+			}
+			else {
+				self.scaleViewToActualSize(view);
+			}
+		}
+		else if (view) {
+			self.centerView(view);
+		}
+	}
+
+	self.centerView = function(view) {
+
+		if (self.scaleViewsToFit) {
+			self.scaleViewToFit(view, true);
+		}
+		else {
+			self.scaleViewToActualSize(view);  // for centering support for now
+		}
+	}
+
+	self.preventDoubleClick = function(event) {
+		event.stopImmediatePropagation();
+	}
+
+	self.getHashFragment = function() {
+		var value = window.location.hash ? window.location.hash.replace("#", "") : "";
+		return value;
+	}
+
+	self.showBlockElement = function(view) {
+		view.style.display = "block";
+	}
+
+	self.hideElement = function(view) {
+		view.style.display = "none";
+	}
+
+	self.showStateFunction = null;
+
+	self.showMediaQueryViewsByState = function(state, event) {
+		// browser will hide and show by media query (small, medium, large)
+		// but if multiple views exists at same size user may want specific view
+		// if showStateFunction is defined that is called with state fragment and user can show or hide each media matching view by returning true or false
+		// if showStateFunction is not defined and state is defined and view has a defined state that matches then show that and hide other matching views
+		// if no state is defined show view 
+		// an viewChanging event is dispatched before views are shown or hidden that can be prevented 
+
+		// get all matched queries
+		// if state name is specified then show that view and hide other views
+		// if no state name is defined then show
+		var matchedViews = self.getMatchingViews();
+		var matchMediaQuery = true;
+		var foundViews = self.getViewsByStateName(state, matchMediaQuery);
+		var showViews = [];
+		var hideViews = [];
+
+		// loop views that match media query 
+		for (let index = 0; index < matchedViews.length; index++) {
+			var view = matchedViews[index];
+			
+			// let user determine visible view
+			if (self.showStateFunction!=null) {
+				if (self.showStateFunction(view, state)) {
+					showViews.push(view);
+				}
+				else {
+					hideViews.push(view);
+				}
+			}
+			// state was defined so check if view matches state
+			else if (foundViews.length) {
+
+				if (foundViews.indexOf(view)!=-1) {
+					showViews.push(view);
+				}
+				else {
+					hideViews.push(view);
+				}
+			}
+			// if no state names are defined show view (define unused state name to exclude)
+			else if (state==null || state=="") {
+				showViews.push(view);
+			}
+		}
+
+		if (showViews.length) {
+			var viewChangingEvent = new Event(self.VIEW_CHANGING);
+			viewChangingEvent.showViews = showViews;
+			viewChangingEvent.hideViews = hideViews;
+			window.dispatchEvent(viewChangingEvent);
+
+			if (viewChangingEvent.defaultPrevented==false) {
+				for (var index = 0; index < hideViews.length; index++) {
+					var view = hideViews[index];
+
+					if (self.isOverlay(view)) {
+						self.removeOverlay(view);
+					}
+					else {
+						self.hideElement(view);
+					}
+				}
+
+				for (var index = 0; index < showViews.length; index++) {
+					var view = showViews[index];
+
+					if (index==showViews.length-1) {
+						self.clearDisplay(view);
+						self.setViewOptions(view);
+						self.setViewVariables(view);
+						self.centerView(view);
+						self.updateURLState(view, state);
+					}
+				}
+			}
+
+			var viewChangeEvent = new Event(self.VIEW_CHANGE);
+			viewChangeEvent.showViews = showViews;
+			viewChangeEvent.hideViews = hideViews;
+			window.dispatchEvent(viewChangeEvent);
+		}
+		
+	}
+
+	self.clearDisplay = function(view) {
+		view.style.setProperty("display", null);
+	}
+
+	self.hashChangeHandler = function(event) {
+		var fragment = self.getHashFragment();
+		var view = self.getViewById(fragment);
+
+		if (self.showByMediaQuery) {
+			var stateName = fragment;
+
+			if (stateName==null || stateName=="") {
+				var initialView = self.getInitialView();
+				stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+			}
+			self.showMediaQueryViewsByState(stateName);
+		}
+		else {
+			if (view) {
+				self.hideViews();
+				self.showView(view);
+				self.setViewVariables(view);
+				self.updateViewLabel();
+				
+				window.dispatchEvent(new Event(self.VIEW_CHANGE));
+			}
+			else {
+				window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+			}
+		}
+	}
+
+	self.popStateHandler = function(event) {
+		var state = event.state;
+		var fragment = state ? state.name : window.location.hash;
+		var view = self.getViewById(fragment);
+
+		if (view) {
+			self.hideViews();
+			self.showView(view);
+			self.updateViewLabel();
+		}
+		else {
+			window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+		}
+	}
+
+	self.doubleClickHandler = function(event) {
+		var view = self.getVisibleView();
+		var scaleValue = view ? self.getViewScaleValue(view) : 1;
+		var scaleNeededToFit = view ? self.getViewFitToViewportScale(view) : 1;
+		var scaleNeededToFitWidth = view ? self.getViewFitToViewportWidthScale(view) : 1;
+		var scaleNeededToFitHeight = view ? self.getViewFitToViewportHeightScale(view) : 1;
+		var scaleToFitType = self.scaleToFitType;
+
+		// Three scenarios
+		// - scale to fit on double click
+		// - set scale to actual size on double click
+		// - switch between scale to fit and actual page size
+
+		if (scaleToFitType=="width") {
+			scaleNeededToFit = scaleNeededToFitWidth;
+		}
+		else if (scaleToFitType=="height") {
+			scaleNeededToFit = scaleNeededToFitHeight;
+		}
+
+		// if scale and actual size enabled then switch between
+		if (self.scaleToFitOnDoubleClick && self.actualSizeOnDoubleClick) {
+			var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+			var isScaled = false;
+			
+			// if scale is not 1 then view needs scaling
+			if (scaleNeededToFit!=1) {
+
+				// if current scale is at 1 it is at actual size
+				// scale it to fit
+				if (scaleValue==1) {
+					self.scaleViewToFit(view);
+					isScaled = true;
+				}
+				else {
+					// scale is not at 1 so switch to actual size
+					self.scaleViewToActualSize(view);
+					isScaled = false;
+				}
+			}
+			else {
+				// view is smaller than viewport 
+				// so scale to fit() is scale actual size
+				// actual size and scaled size are the same
+				// but call scale to fit to retain centering
+				self.scaleViewToFit(view);
+				isScaled = false;
+			}
+			
+			view.setAttributeNS(null, self.SIZE_STATE_NAME, isScaled+"");
+			isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+		}
+		else if (self.scaleToFitOnDoubleClick) {
+			self.scaleViewToFit(view);
+		}
+		else if (self.actualSizeOnDoubleClick) {
+			self.scaleViewToActualSize(view);
+		}
+
+	}
+
+	self.scaleViewToFit = function(view) {
+		return self.setViewScaleValue(view, true);
+	}
+
+	self.scaleViewToActualSize = function(view) {
+		self.setViewScaleValue(view, false, 1);
+	}
+
+	self.onloadHandler = function(event) {
+		self.initialize();
+	}
+
+	self.setElementHTML = function(id, value) {
+		var element = self.getElement(id);
+		element.innerHTML = value;
+	}
+
+	self.getStackArray = function(error) {
+		var value = "";
+		
+		if (error==null) {
+		  try {
+			 error = new Error("Stack");
+		  }
+		  catch (e) {
+			 
+		  }
+		}
+		
+		if ("stack" in error) {
+		  value = error.stack;
+		  var methods = value.split(/\n/g);
+	 
+		  var newArray = methods ? methods.map(function (value, index, array) {
+			 value = value.replace(/\@.*/,"");
+			 return value;
+		  }) : null;
+	 
+		  if (newArray && newArray[0].includes("getStackTrace")) {
+			 newArray.shift();
+		  }
+		  if (newArray && newArray[0].includes("getStackArray")) {
+			 newArray.shift();
+		  }
+		  if (newArray && newArray[0]=="") {
+			 newArray.shift();
+		  }
+	 
+			return newArray;
+		}
+		
+		return null;
+	}
+
+	self.log = function(value) {
+		console.log.apply(this, [value]);
+	}
+	
+	// initialize on load
+	// sometimes the body size is 0 so we call this now and again later
+	window.addEventListener("load", self.onloadHandler);
+	window.document.addEventListener("DOMContentLoaded", self.onloadHandler);
+}
+
+window.application = new Application();
+</script>
+</head>
+<body>
+<div id="Inbox-message">
+	<div id="Inbox">
+		<span>Inbox</span>
+	</div>
+	<div id="Navbar">
+		<svg class="NavbarBG">
+			<rect id="NavbarBG" rx="0" ry="0" x="0" y="0" width="1340" height="70">
+			</rect>
+		</svg>
+		<div id="User_Menu">
+			<div id="Username">
+				<span>John Doe</span>
+			</div>
+			<img id="Avatar" src="Avatar.png" srcset="Avatar.png 1x, Avatar@2x.png 2x">
+			<div id="small-down">
+				<svg class="Path_26" viewBox="2.6 4.6 11 7">
+					<path id="Path_26" d="M 8.09999942779541 11.60000038146973 L 2.599999666213989 6.041176319122314 L 4.02592658996582 4.599999904632568 L 8.09999942779541 8.717647552490234 L 12.17407512664795 4.599999904632568 L 13.59999942779541 6.041176319122314 L 8.09999942779541 11.60000038146973 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<svg class="Divider">
+			<rect id="Divider" rx="0" ry="0" x="0" y="0" width="1" height="28">
+			</rect>
+		</svg>
+		<div id="Notification">
+			<svg class="Notification_Icon" viewBox="-1377 67 16 16">
+				<path id="Notification_Icon" d="M -1370.999755859375 81 L -1367.000122070313 81 C -1367.000122070313 82.09980010986328 -1367.900146484375 82.99980163574219 -1368.999877929688 82.99980163574219 C -1370.099731445313 82.99980163574219 -1370.999755859375 82.09980010986328 -1370.999755859375 81 Z M -1376.000122070313 80.00009918212891 C -1376.599487304688 80.00009918212891 -1377 79.59960174560547 -1377 79.00019836425781 C -1377 78.39990234375 -1376.599487304688 78.00030517578125 -1376.000122070313 78.00030517578125 L -1375.499755859375 78.00030517578125 C -1374.800415039063 77.30010223388672 -1374.000366210938 76.30020141601563 -1374.000366210938 74.99970245361328 L -1374.000366210938 72 C -1374.000366210938 69.20010375976563 -1371.7998046875 66.99960327148438 -1368.999877929688 66.99960327148438 C -1366.200073242188 66.99960327148438 -1364.00048828125 69.20010375976563 -1364.00048828125 72 L -1364.00048828125 74.99970245361328 C -1364.00048828125 76.30020141601563 -1363.200317382813 77.30010223388672 -1362.500122070313 78.00030517578125 L -1361.999755859375 78.00030517578125 C -1361.400390625 78.00030517578125 -1360.999877929688 78.39990234375 -1360.999877929688 79.00019836425781 C -1360.999877929688 79.59960174560547 -1361.400390625 80.00009918212891 -1361.999755859375 80.00009918212891 L -1376.000122070313 80.00009918212891 Z">
+				</path>
+			</svg>
+			<svg class="Notification_Badge">
+				<ellipse id="Notification_Badge" rx="4" ry="4" cx="4" cy="4">
+				</ellipse>
+			</svg>
+		</div>
+		<svg class="Chat_Icon" viewBox="-1246 -13 15.999 15.999">
+			<path id="Chat_Icon" d="M -1234.69287109375 0.8901000022888184 C -1235.114135742188 0.9603000283241272 -1235.550659179688 0.9999000430107117 -1235.999755859375 0.9999000430107117 C -1237.444213867188 0.9999000430107117 -1238.76904296875 0.6173999905586243 -1239.804931640625 -0.02070000022649765 C -1239.702270507813 -0.01800000108778477 -1239.603271484375 0 -1239.499877929688 0 C -1235.340087890625 0 -1231.8759765625 -2.652300119400024 -1231.14697265625 -6.138900279998779 C -1230.4287109375 -5.397300243377686 -1230.000366210938 -4.487400054931641 -1230.000366210938 -3.500100135803223 C -1230.000366210938 -2.574900150299072 -1230.372924804688 -1.715400099754333 -1231.011962890625 -0.9999000430107117 L -1231.000244140625 -0.9999000430107117 L -1231.000244140625 2.99970006942749 L -1234.69287109375 0.8901000022888184 Z M -1244.999755859375 -4.578299999237061 C -1245.629760742188 -5.426100254058838 -1245.999633789063 -6.425100326538086 -1245.999633789063 -7.49970006942749 C -1245.999633789063 -10.53810024261475 -1243.089965820313 -12.99960041046143 -1239.499877929688 -12.99960041046143 C -1235.909790039063 -12.99960041046143 -1233 -10.53810024261475 -1233 -7.49970006942749 C -1233 -4.462200164794922 -1235.909790039063 -1.999800086021423 -1239.499877929688 -1.999800086021423 C -1240.504272460938 -1.999800086021423 -1241.451904296875 -2.197800159454346 -1242.300659179688 -2.541599988937378 L -1244.999755859375 -0.9999000430107117 L -1244.999755859375 -4.578299999237061 Z">
+			</path>
+		</svg>
+		<svg class="Support_Iocn" viewBox="0 0 16 16">
+			<path id="Support_Iocn" d="M 8 0 C 3.599999904632568 0 0 3.599999904632568 0 8 C 0 12.39999961853027 3.599999904632568 16 8 16 C 12.39999961853027 16 16 12.39999961853027 16 8 C 16 3.599999904632568 12.39999961853027 0 8 0 Z M 8 10 C 6.900000095367432 10 6 9.100000381469727 6 8 C 6 6.900000095367432 6.900000095367432 6 8 6 C 9.100000381469727 6 10 6.900000095367432 10 8 C 10 9.100000381469727 9.100000381469727 10 8 10 Z M 8 2 C 8.899999618530273 2 9.800000190734863 2.200000047683716 10.60000038146973 2.599999904632568 L 9.043999671936035 4.156000137329102 C 8.282999992370605 3.949000120162964 7.716999530792236 3.949000120162964 6.954999923706055 4.156000137329102 L 5.400000095367432 2.599999904632568 C 6.199999809265137 2.200000047683716 7.099999904632568 2 8 2 Z M 2 8 C 2 7.099999904632568 2.200000047683716 6.199999809265137 2.599999904632568 5.400000095367432 L 4.156000137329102 6.956000328063965 C 3.949000120162964 7.717000484466553 3.949000120162964 8.282999992370605 4.156000137329102 9.045000076293945 L 2.599999904632568 10.60000038146973 C 2.200000047683716 9.800000190734863 2 8.899999618530273 2 8 Z M 8 14 C 7.099999904632568 14 6.199999809265137 13.80000019073486 5.400000095367432 13.39999961853027 L 6.956000328063965 11.8439998626709 C 7.717000484466553 12.05099964141846 8.282999992370605 12.05099964141846 9.045000076293945 11.8439998626709 L 10.60000038146973 13.39999961853027 C 9.800000190734863 13.80000019073486 8.899999618530273 14 8 14 Z M 13.39999961853027 10.60000038146973 L 11.8439998626709 9.044000625610352 C 12.05099964141846 8.283000946044922 12.05099964141846 7.717000484466553 11.8439998626709 6.955000877380371 L 13.39999961853027 5.400000095367432 C 13.80000019073486 6.199999809265137 14 7.099999904632568 14 8 C 14 8.899999618530273 13.80000019073486 9.800000190734863 13.39999961853027 10.60000038146973 Z">
+			</path>
+		</svg>
+		<div id="Search_Input">
+			<div id="Search_transactions_invoices_o">
+				<span>Search transactions, invoices or help</span>
+			</div>
+			<div id="icon_search" class="icon_search">
+				<svg class="icon_search_" viewBox="0 0 16 16">
+					<path id="icon_search_" d="M 12.69999980926514 11.22981357574463 C 13.59999942779541 10.03726673126221 14.09999942779541 8.645962715148926 14.09999942779541 7.055900573730469 C 14.10000038146973 3.180124044418335 11 0 7.099999904632568 0 C 3.199999809265137 0 0 3.180124044418335 0 7.055900096893311 C 0 10.93167686462402 3.200000047683716 14.11180019378662 7.099999904632568 14.11180019378662 C 8.699999809265137 14.11180019378662 10.19999980926514 13.61490631103516 11.29999923706055 12.72049617767334 L 14.29999923706055 15.70186328887939 C 14.49999904632568 15.90062046051025 14.79999923706055 16 14.99999904632568 16 C 15.19999885559082 16 15.49999904632568 15.90062046051025 15.69999885559082 15.70186328887939 C 16.09999847412109 15.30434799194336 16.09999847412109 14.70807456970215 15.69999885559082 14.31055927276611 L 12.69999980926514 11.22981357574463 Z M 7.099999904632568 12.0248441696167 C 4.300000190734863 12.0248441696167 2 9.838508605957031 2 7.055900096893311 C 2 4.273292064666748 4.300000190734863 1.987577557563782 7.099999904632568 1.987577557563782 C 9.899999618530273 1.987577557563782 12.19999980926514 4.273292064666748 12.19999980926514 7.055900096893311 C 12.19999980926514 9.838508605957031 9.899999618530273 12.0248441696167 7.099999904632568 12.0248441696167 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div id="Statistics">
+		<svg class="StatisticsBG">
+			<rect id="StatisticsBG" rx="0" ry="0" x="0" y="0" width="1170" height="752">
+			</rect>
+		</svg>
+	</div>
+	<div id="btn_compose">
+		<svg class="Rectangle_166">
+			<rect id="Rectangle_166" rx="4" ry="4" x="0" y="0" width="155" height="35">
+			</rect>
+		</svg>
+		<div id="Compose">
+			<span>Compose</span>
+		</div>
+	</div>
+	<div id="contactlist">
+		<div id="mail">
+			<div id="mail_bh" class="mail">
+				<svg class="Rectangle_159">
+					<rect id="Rectangle_159" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+			<div id="Names_c">
+				<span>David James</span>
+			</div>
+			<div id="Dates_c">
+				<span>Jan 5</span>
+			</div>
+			<svg class="Path_294_c" viewBox="1837 5055.342 300 1">
+				<path id="Path_294_c" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+				</path>
+			</svg>
+			<img id="avatar_c" src="avatar_c.png" srcset="avatar_c.png 1x, avatar_c@2x.png 2x">
+			</div>
+			<div id="mail_bn" class="mail">
+				<svg class="Rectangle_159_bo">
+					<rect id="Rectangle_159_bo" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James">
+					<span>Tony Stark</span>
+				</div>
+				<div id="Jan_5">
+					<span>Jan 4</span>
+				</div>
+				<svg class="Path_294_br" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_br" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_bs" src="avatar_bs.png" srcset="avatar_bs.png 1x, avatar_bs@2x.png 2x">
+			</div>
+			<div id="mail_bt" class="mail">
+				<svg class="Rectangle_159_bu">
+					<rect id="Rectangle_159_bu" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_bv">
+					<span>Bessie Berry</span>
+				</div>
+				<div id="Jan_5_bw">
+					<span>Jan 2</span>
+				</div>
+				<svg class="Path_294_bx" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_bx" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_by" src="avatar_by.png" srcset="avatar_by.png 1x, avatar_by@2x.png 2x">
+			</div>
+			<div id="mail_bz" class="mail">
+				<svg class="Rectangle_159_b">
+					<rect id="Rectangle_159_b" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_b">
+					<span>Gleb Kuznetsov</span>
+				</div>
+				<div id="Jan_5_b">
+					<span>Dec 30</span>
+				</div>
+				<svg class="Path_294_b" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_b" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_b" src="avatar_b.png" srcset="avatar_b.png 1x, avatar_b@2x.png 2x">
+			</div>
+			<div id="mail_b" class="mail">
+				<svg class="Rectangle_159_ca">
+					<rect id="Rectangle_159_ca" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_ca">
+					<span>Andrey Prokopenko</span>
+				</div>
+				<div id="Jan_5_ca">
+					<span>Dec 28</span>
+				</div>
+				<svg class="Path_294_ca" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_ca" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_ca" src="avatar_ca.png" srcset="avatar_ca.png 1x, avatar_ca@2x.png 2x">
+			</div>
+			<div id="mail_cb" class="mail">
+				<svg class="Rectangle_159_cc">
+					<rect id="Rectangle_159_cc" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_cd">
+					<span>Nick Herasimenka</span>
+				</div>
+				<div id="Jan_5_ce">
+					<span>Dec 17</span>
+				</div>
+				<svg class="Path_294_cf" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_cf" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_cg" src="avatar_cg.png" srcset="avatar_cg.png 1x, avatar_cg@2x.png 2x">
+			</div>
+			<div id="mail_ch" class="mail">
+				<svg class="Rectangle_159_ci">
+					<rect id="Rectangle_159_ci" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_cj">
+					<span>Valentin Salmon</span>
+				</div>
+				<div id="Jan_5_ck">
+					<span>Dec 12</span>
+				</div>
+				<svg class="Path_294_cl" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_cl" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_cm" src="avatar_cm.png" srcset="avatar_cm.png 1x, avatar_cm@2x.png 2x">
+			</div>
+			<div id="mail_cn" class="mail">
+				<svg class="Rectangle_159_co">
+					<rect id="Rectangle_159_co" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_cp">
+					<span>Miro Kirov</span>
+				</div>
+				<div id="Jan_5_cq">
+					<span>Nov 29</span>
+				</div>
+				<svg class="Path_294_cr" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_cr" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_cs" src="avatar_cs.png" srcset="avatar_cs.png 1x, avatar_cs@2x.png 2x">
+			</div>
+			<div id="mail_ct" class="mail">
+				<svg class="Rectangle_159_cu">
+					<rect id="Rectangle_159_cu" rx="0" ry="0" x="0" y="0" width="300" height="80">
+					</rect>
+				</svg>
+				<div id="David_James_cv">
+					<span>David James</span>
+				</div>
+				<div id="Jan_5_cw">
+					<span>Nov 28</span>
+				</div>
+				<svg class="Path_294_cx" viewBox="1837 5055.342 300 1">
+					<path id="Path_294_cx" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+					</path>
+				</svg>
+				<img id="avatar_cy" src="avatar_cy.png" srcset="avatar_cy.png 1x, avatar_cy@2x.png 2x">
+			</div>
+		</div>
+		<div id="mail_cz">
+			<svg class="Rectangle_159_c">
+				<rect id="Rectangle_159_c" rx="0" ry="0" x="0" y="0" width="300" height="80">
+				</rect>
+			</svg>
+			<div id="Names_c">
+				<span>David James</span>
+			</div>
+			<div id="Checking_in">
+				<span>Checking in</span>
+			</div>
+			<div id="Dates_c">
+				<span>Jan 5</span>
+			</div>
+			<svg class="Path_294_c" viewBox="1837 5055.342 300 1">
+				<path id="Path_294_c" d="M 1836.999877929688 5055.34228515625 C 1836.999877929688 5055.34228515625 2136.99951171875 5055.34228515625 2136.99951171875 5055.34228515625">
+				</path>
+			</svg>
+			<img id="avatar_c" src="avatar_c.png" srcset="avatar_c.png 1x, avatar_c@2x.png 2x">
+		</div>
+		<div id="tag_color">
+			<svg class="tag">
+				<rect id="tag" rx="0" ry="0" x="0" y="0" width="3" height="80">
+				</rect>
+			</svg>
+			<svg class="tag_c">
+				<rect id="tag_c" rx="0" ry="0" x="0" y="0" width="3" height="80">
+				</rect>
+			</svg>
+			<svg class="tag_da">
+				<rect id="tag_da" rx="0" ry="0" x="0" y="0" width="3" height="80">
+				</rect>
+			</svg>
+			<svg class="tag_db">
+				<rect id="tag_db" rx="0" ry="0" x="0" y="0" width="3" height="80">
+				</rect>
+			</svg>
+		</div>
+		<div id="Search_Input_db">
+			<svg class="Rectangle_181">
+				<rect id="Rectangle_181" rx="0" ry="0" x="0" y="0" width="300" height="86">
+				</rect>
+			</svg>
+			<div id="Search_Message_or_Name">
+				<span>Search Message or Name…</span>
+			</div>
+			<svg class="Search_Icon" viewBox="0 0 16 16">
+				<path id="Search_Icon" d="M 12.69999980926514 11.22981357574463 C 13.59999942779541 10.03726673126221 14.09999942779541 8.645962715148926 14.09999942779541 7.055900573730469 C 14.10000038146973 3.180124044418335 11 0 7.099999904632568 0 C 3.199999809265137 0 0 3.180124044418335 0 7.055900096893311 C 0 10.93167686462402 3.200000047683716 14.11180019378662 7.099999904632568 14.11180019378662 C 8.699999809265137 14.11180019378662 10.19999980926514 13.61490631103516 11.29999923706055 12.72049617767334 L 14.29999923706055 15.70186328887939 C 14.49999904632568 15.90062046051025 14.79999923706055 16 14.99999904632568 16 C 15.19999885559082 16 15.49999904632568 15.90062046051025 15.69999885559082 15.70186328887939 C 16.09999847412109 15.30434799194336 16.09999847412109 14.70807456970215 15.69999885559082 14.31055927276611 L 12.69999980926514 11.22981357574463 Z M 7.099999904632568 12.0248441696167 C 4.300000190734863 12.0248441696167 2 9.838508605957031 2 7.055900096893311 C 2 4.273292064666748 4.300000190734863 1.987577557563782 7.099999904632568 1.987577557563782 C 9.899999618530273 1.987577557563782 12.19999980926514 4.273292064666748 12.19999980926514 7.055900096893311 C 12.19999980926514 9.838508605957031 9.899999618530273 12.0248441696167 7.099999904632568 12.0248441696167 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="line">
+			<svg class="Path_311" viewBox="-1107 959 1 752.448">
+				<path id="Path_311" d="M -1107 959 C -1107 959 -1107 1711.447875976563 -1107 1711.447875976563">
+				</path>
+			</svg>
+			<svg class="Path_312" viewBox="-1107 959 1 752.448">
+				<path id="Path_312" d="M -1107 959 C -1107 959 -1107 1711.447875976563 -1107 1711.447875976563">
+				</path>
+			</svg>
+			<svg class="Path_313" viewBox="1837 5055.342 300 1">
+				<path id="Path_313" d="M 1836.999755859375 5055.34228515625 C 1836.999755859375 5055.34228515625 2136.999755859375 5055.34228515625 2136.999755859375 5055.34228515625">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="tag_dj">
+		<svg class="Rectangle_182">
+			<rect id="Rectangle_182" rx="0" ry="0" x="0" y="0" width="200" height="169">
+			</rect>
+		</svg>
+		<div id="tag_dl">
+			<div id="tag_dl_0" class="">
+				<div id="Sales">
+					<span>Sales</span>
+				</div>
+			</div>
+			<div id="tag_dl_1" class="">
+				<div id="Marketing">
+					<span>Marketing</span>
+				</div>
+			</div>
+			<div id="tag_dl_2" class="">
+				<div id="Design">
+					<span>Design</span>
+				</div>
+			</div>
+		</div>
+		<div id="Tag_ds">
+			<span>Tag</span>
+		</div>
+		<div id="tagcolor">
+			<svg class="Ellipse_36">
+				<ellipse id="Ellipse_36" rx="5" ry="5" cx="5" cy="5">
+				</ellipse>
+			</svg>
+			<svg class="Ellipse_37">
+				<ellipse id="Ellipse_37" rx="5" ry="5" cx="5" cy="5">
+				</ellipse>
+			</svg>
+			<svg class="Ellipse_38">
+				<ellipse id="Ellipse_38" rx="5" ry="5" cx="5" cy="5">
+				</ellipse>
+			</svg>
+		</div>
+		<svg class="Path_309" viewBox="1837 5055.342 200.342 1">
+			<path id="Path_309" d="M 1836.999755859375 5055.34228515625 C 1836.999755859375 5055.34228515625 2037.342041015625 5055.34228515625 2037.342041015625 5055.34228515625">
+			</path>
+		</svg>
+	</div>
+	<div id="tab">
+		<svg class="Rectangle_182_dz">
+			<rect id="Rectangle_182_dz" rx="0" ry="0" x="0" y="0" width="200" height="269">
+			</rect>
+		</svg>
+		<svg class="Path_309_d" viewBox="1837 5055.342 200.342 1">
+			<path id="Path_309_d" d="M 1836.999755859375 5055.34228515625 C 1836.999755859375 5055.34228515625 2037.342041015625 5055.34228515625 2037.342041015625 5055.34228515625">
+			</path>
+		</svg>
+		<svg class="Path_310" viewBox="1837 5055.342 200.342 1">
+			<path id="Path_310" d="M 1836.999755859375 5055.34228515625 C 1836.999755859375 5055.34228515625 2037.342041015625 5055.34228515625 2037.342041015625 5055.34228515625">
+			</path>
+		</svg>
+		<div id="ID2">
+			<span>2</span>
+		</div>
+		<div id="text">
+			<div id="text_0" class="">
+				<div id="Sent">
+					<span>Sent</span>
+				</div>
+			</div>
+			<div id="text_1" class="">
+				<div id="Drafts">
+					<span>Drafts</span>
+				</div>
+			</div>
+			<div id="text_2" class="">
+				<div id="Trash">
+					<span>Trash</span>
+				</div>
+			</div>
+			<div id="text_3" class="">
+				<div id="Important">
+					<span>Important</span>
+				</div>
+			</div>
+			<div id="text_4" class="">
+				<div id="Spam">
+					<span>Spam</span>
+				</div>
+			</div>
+			<div id="text_5" class="">
+				<div id="Starred">
+					<span>Starred</span>
+				</div>
+			</div>
+		</div>
+		<div id="text_eg">
+			<div id="Inbox_eh">
+				<span>Inbox</span>
+			</div>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+	</div>
+	<div id="Side_Menu">
+		<svg class="SidebarBG">
+			<rect id="SidebarBG" rx="0" ry="0" x="0" y="0" width="260" height="960">
+			</rect>
+		</svg>
+		<div id="Main_Menu">
+			<div id="Settings">
+				<svg class="BG">
+					<rect id="BG" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Settings_eo">
+					<span>Settings</span>
+				</div>
+				<div id="icon_setting" class="icon_setting">
+					<svg class="Path_108" viewBox="0 0 16 16">
+						<path id="Path_108" d="M 13.30000019073486 5.199999809265137 L 14.40000057220459 3.099999904632568 L 13.00000095367432 1.699999928474426 L 10.90000152587891 2.799999952316284 C 10.60000133514404 2.599999904632568 10.20000171661377 2.5 9.80000114440918 2.399999856948853 L 9 0 L 7 0 L 6.199999809265137 2.299999952316284 C 5.900000095367432 2.400000095367432 5.5 2.5 5.199999809265137 2.700000047683716 L 3.099999904632568 1.600000023841858 L 1.600000023841858 3.099999904632568 L 2.700000047683716 5.199999809265137 C 2.5 5.5 2.400000095367432 5.900000095367432 2.299999952316284 6.199999809265137 L 0 7 L 0 9 L 2.299999952316284 9.800000190734863 C 2.399999856948853 10.19999980926514 2.599999904632568 10.5 2.700000047683716 10.90000057220459 L 1.600000023841858 13 L 3 14.39999961853027 L 5.099999904632568 13.29999923706055 C 5.400000095367432 13.49999904632568 5.799999713897705 13.59999942779541 6.199999809265137 13.69999885559082 L 7 16 L 9 16 L 9.800000190734863 13.69999980926514 C 10.19999980926514 13.59999942779541 10.5 13.39999961853027 10.90000057220459 13.30000019073486 L 13 14.40000057220459 L 14.39999961853027 13.00000095367432 L 13.29999923706055 10.90000152587891 C 13.49999904632568 10.60000133514404 13.59999942779541 10.20000171661377 13.69999885559082 9.80000114440918 L 16 9 L 16 7 L 13.69999980926514 6.199999809265137 C 13.60000038146973 5.900000095367432 13.5 5.5 13.30000019073486 5.199999809265137 Z M 8 11 C 6.300000190734863 11 5 9.699999809265137 5 8 C 5 6.300000190734863 6.300000190734863 5 8 5 C 9.699999809265137 5 11 6.300000190734863 11 8 C 11 9.699999809265137 9.699999809265137 11 8 11 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Help_Center">
+				<svg class="BG_es">
+					<rect id="BG_es" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Check-InOut">
+					<span>Check-In/Out</span>
+				</div>
+				<div id="icon_help-center" class="icon_help_center">
+					<svg class="Path_107" viewBox="0 0 16 16">
+						<path id="Path_107" d="M 8 0 C 3.599999904632568 0 0 3.599999904632568 0 8 C 0 12.39999961853027 3.599999904632568 16 8 16 C 12.39999961853027 16 16 12.39999961853027 16 8 C 16 3.599999904632568 12.39999961853027 0 8 0 Z M 8 10 C 6.900000095367432 10 6 9.100000381469727 6 8 C 6 6.900000095367432 6.900000095367432 6 8 6 C 9.100000381469727 6 10 6.900000095367432 10 8 C 10 9.100000381469727 9.100000381469727 10 8 10 Z M 8 2 C 8.899999618530273 2 9.800000190734863 2.200000047683716 10.60000038146973 2.599999904632568 L 9.043999671936035 4.156000137329102 C 8.282999992370605 3.949000120162964 7.716999530792236 3.949000120162964 6.954999923706055 4.156000137329102 L 5.400000095367432 2.599999904632568 C 6.199999809265137 2.200000047683716 7.099999904632568 2 8 2 Z M 2 8 C 2 7.099999904632568 2.200000047683716 6.199999809265137 2.599999904632568 5.400000095367432 L 4.156000137329102 6.956000328063965 C 3.949000120162964 7.717000484466553 3.949000120162964 8.282999992370605 4.156000137329102 9.045000076293945 L 2.599999904632568 10.60000038146973 C 2.200000047683716 9.800000190734863 2 8.899999618530273 2 8 Z M 8 14 C 7.099999904632568 14 6.199999809265137 13.80000019073486 5.400000095367432 13.39999961853027 L 6.956000328063965 11.8439998626709 C 7.717000484466553 12.05099964141846 8.282999992370605 12.05099964141846 9.045000076293945 11.8439998626709 L 10.60000038146973 13.39999961853027 C 9.800000190734863 13.80000019073486 8.899999618530273 14 8 14 Z M 13.39999961853027 10.60000038146973 L 11.8439998626709 9.044000625610352 C 12.05099964141846 8.283000946044922 12.05099964141846 7.717000484466553 11.8439998626709 6.955000877380371 L 13.39999961853027 5.400000095367432 C 13.80000019073486 6.199999809265137 14 7.099999904632568 14 8 C 14 8.899999618530273 13.80000019073486 9.800000190734863 13.39999961853027 10.60000038146973 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Calendar">
+				<svg class="BG_ex">
+					<rect id="BG_ex" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Calendar_ey">
+					<span>Calendar</span>
+				</div>
+				<div id="icon_calendar" class="icon_calendar">
+					<svg class="Rectangle_557">
+						<rect id="Rectangle_557" rx="0" ry="0" x="0" y="0" width="16" height="16">
+						</rect>
+					</svg>
+					<svg class="Path_149" viewBox="0 0 16 16">
+						<path id="Path_149" d="M 2 5 L 2 14 L 14 14 L 14 5 L 2 5 Z M 13 2 L 15 2 C 15.60000038146973 2 16 2.400000095367432 16 3 L 16 15 C 16 15.60000038146973 15.60000038146973 16 15 16 L 1 16 C 0.3999999761581421 16 0 15.60000038146973 0 15 L 0 3 C 0 2.400000095367432 0.4000000059604645 2 1 2 L 3 2 L 3 1 C 3 0.3999999761581421 3.400000095367432 0 4 0 C 4.599999904632568 0 5 0.4000000059604645 5 1 L 5 2 L 11 2 L 11 1 C 11 0.3999999761581421 11.39999961853027 0 12 0 C 12.60000038146973 0 13 0.4000000059604645 13 1 L 13 2 Z M 12 12 L 10 12 L 10 10 L 12 10 L 12 12 Z M 9 12 L 7 12 L 7 10 L 9 10 L 9 12 Z M 12 9 L 10 9 L 10 7 L 12 7 L 12 9 Z M 9 9 L 7 9 L 7 7 L 9 7 L 9 9 Z M 6 12 L 4 12 L 4 10 L 6 10 L 6 12 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Chat_Room">
+				<svg class="BG_e">
+					<rect id="BG_e" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Chat_Room_e">
+					<span>Chat Room</span>
+				</div>
+				<div id="icon_chat-room" class="icon_chat_room">
+					<svg class="Union_11" viewBox="1 -395 16 16">
+						<path id="Union_11" d="M 10.99980068206787 -381.9996032714844 L 6.00029993057251 -381.9996032714844 L 7.828200340270996 -384.0003051757813 L 14.00040054321289 -384.0003051757813 C 14.55210018157959 -384.0003051757813 15.00030040740967 -384.4476013183594 15.00030040740967 -385.0002136230469 L 15.00030040740967 -390.9996032714844 L 16.00020027160645 -390.9996032714844 C 16.55190086364746 -390.9996032714844 17.00010108947754 -390.5523071289063 17.00010108947754 -389.9996948242188 L 17.00010108947754 -383.0003967285156 C 17.00010108947754 -382.4478149414063 16.55190086364746 -381.9996032714844 16.00020027160645 -381.9996032714844 L 14.00040054321289 -381.9996032714844 L 14.00040054321289 -378.9999084472656 L 10.99980068206787 -381.9996032714844 Z M 3.999600172042847 -386.0001220703125 L 1.999800086021423 -386.0001220703125 C 1.448100090026855 -386.0001220703125 0.9999000430107117 -386.4483032226563 0.9999000430107117 -387 L 0.9999000430107117 -394.0002136230469 C 0.9999000430107117 -394.5519104003906 1.448100090026855 -395.0001220703125 1.999800086021423 -395.0001220703125 L 11.99970054626465 -395.0001220703125 C 12.55230045318604 -395.0001220703125 12.99960041046143 -394.5519104003906 12.99960041046143 -394.0002136230469 L 12.99960041046143 -387 C 12.99960041046143 -386.4483032226563 12.55230045318604 -386.0001220703125 11.99970054626465 -386.0001220703125 L 7.000200271606445 -386.0001220703125 L 3.999600172042847 -383.0003967285156 L 3.999600172042847 -386.0001220703125 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Customers">
+				<svg class="BG_fa">
+					<rect id="BG_fa" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Deparment">
+					<span>Deparment</span>
+				</div>
+				<div id="icon_customers" class="icon_customers">
+					<svg class="Union_10" viewBox="-4 -326 14 16">
+						<path id="Union_10" d="M -3.999600172042847 -309.9996032714844 C -3.999600172042847 -313.2998962402344 -1.299600005149841 -315.9999084472656 1.999800086021423 -315.9999084472656 L 3.999600172042847 -315.9999084472656 C 7.299900054931641 -315.9999084472656 9.999899864196777 -313.2998962402344 9.999899864196777 -309.9996032714844 L -3.999600172042847 -309.9996032714844 Z M -1.400400042533875 -312.0003051757813 L 7.49970006942749 -312.0003051757813 C 6.800400257110596 -313.2000122070313 5.499900341033936 -314.0001220703125 3.999600172042847 -314.0001220703125 L 2.099699974060059 -314.0001220703125 C 0.6003000140190125 -314.0001220703125 -0.7002000212669373 -313.2000122070313 -1.400400042533875 -312.0003051757813 Z M -0.9999000430107117 -321.0003051757813 L -0.9999000430107117 -322.0002136230469 C -0.9999000430107117 -324.1997985839844 0.8001000285148621 -325.9998168945313 2.99970006942749 -325.9998168945313 C 5.200200080871582 -325.9998168945313 7.000200271606445 -324.1997985839844 7.000200271606445 -322.0002136230469 L 7.000200271606445 -321.0003051757813 C 7.000200271606445 -318.7998046875 5.200200080871582 -316.9998168945313 2.99970006942749 -316.9998168945313 C 0.8001000285148621 -316.9998168945313 -0.9999000430107117 -318.7998046875 -0.9999000430107117 -321.0003051757813 Z M 0.9999000430107117 -322.0002136230469 L 0.9999000430107117 -321.0003051757813 C 0.9999000430107117 -319.8995971679688 1.899900078773499 -318.9996032714844 2.99970006942749 -318.9996032714844 C 4.100399971008301 -318.9996032714844 5.000400066375732 -319.8995971679688 5.000400066375732 -321.0003051757813 L 5.000400066375732 -322.0002136230469 C 5.000400066375732 -323.1000061035156 4.100399971008301 -324 2.99970006942749 -324 C 1.899900078773499 -324 0.9999000430107117 -323.1000061035156 0.9999000430107117 -322.0002136230469 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Invoices">
+				<svg class="BG_fd">
+					<rect id="BG_fd" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Watercooler_Options">
+					<span>Watercooler Options</span>
+				</div>
+				<div id="icon_Invoices" class="icon_Invoices">
+					<svg class="Path_102" viewBox="1 0 14 16">
+						<path id="Path_102" d="M 14 0 L 2 0 C 1.399999976158142 0 1 0.4000000059604645 1 1 L 1 16 L 4 14 L 6 16 L 8 14 L 10 16 L 12 14 L 15 16 L 15 1 C 15 0.4000000059604645 14.60000038146973 0 14 0 Z M 12 10 L 4 10 L 4 8 L 12 8 L 12 10 Z M 12 6 L 4 6 L 4 4 L 12 4 L 12 6 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Products">
+				<svg class="BG_fi">
+					<rect id="BG_fi" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Productivity">
+					<span>Productivity</span>
+				</div>
+				<div id="icon_products" class="icon_products">
+					<svg class="Union_9" viewBox="-3 -219 15.999 15.999">
+						<path id="Union_9" d="M 10.99980068206787 -203.0004119873047 L 10.99980068206787 -218.9997100830078 L 12.99960041046143 -218.9997100830078 L 12.99960041046143 -203.0004119873047 L 10.99980068206787 -203.0004119873047 Z M -2.99970006942749 -203.0004119873047 L -2.99970006942749 -218.9997100830078 L -0.9999000430107117 -218.9997100830078 L -0.9999000430107117 -203.0004119873047 L -2.99970006942749 -203.0004119873047 Z M 8.000100135803223 -207.9999084472656 L 8.000100135803223 -218.9997100830078 L 9.999899864196777 -218.9997100830078 L 9.999899864196777 -207.9999084472656 L 8.000100135803223 -207.9999084472656 Z M 2.99970006942749 -207.9999084472656 L 2.99970006942749 -218.9997100830078 L 7.000200271606445 -218.9997100830078 L 7.000200271606445 -207.9999084472656 L 2.99970006942749 -207.9999084472656 Z M 0 -207.9999084472656 L 0 -218.9997100830078 L 1.999800086021423 -218.9997100830078 L 1.999800086021423 -207.9999084472656 L 0 -207.9999084472656 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div id="Inbox_fm">
+				<svg class="BG_fn">
+					<rect id="BG_fn" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Inbox_fo">
+					<span>Inbox</span>
+				</div>
+				<div id="icon_inbox" class="icon_inbox">
+					<svg class="Path_358" viewBox="0 1 16 14">
+						<path id="Path_358" d="M 15 1 L 1 1 C 0.4480000138282776 1 0 1.447000026702881 0 2 L 0 14 C 0 14.55299949645996 0.4480000138282776 15 1 15 L 15 15 C 15.55200004577637 15 16 14.55300045013428 16 14 L 16 2 C 16 1.447000026702881 15.55200004577637 1 15 1 Z M 14 13 L 2 13 L 2 6.723000049591064 L 7.504000186920166 9.868000030517578 C 7.812000274658203 10.04399967193604 8.189000129699707 10.04399967193604 8.496000289916992 9.868000030517578 L 14 6.723000049591064 L 14 13 Z M 14 4.420000076293945 L 8 7.848999977111816 L 2 4.420000076293945 L 2 3 L 14 3 L 14 4.420000076293945 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Dashboard">
+				<svg class="BG_fs">
+					<rect id="BG_fs" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Dashboard_ft">
+					<span>Dashboard</span>
+				</div>
+				<div id="icon_dashboard" class="icon_dashboard">
+					<svg class="Union_8" viewBox="-494 -24 16 16">
+						<path id="Union_8" d="M -480.9996032714844 -8.000100135803223 C -481.5999145507813 -8.000100135803223 -482.0003967285156 -8.399700164794922 -482.0003967285156 -9 L -482.0003967285156 -18 C -482.0003967285156 -18.60029983520508 -481.5999145507813 -18.99990081787109 -480.9996032714844 -18.99990081787109 L -478.9998168945313 -18.99990081787109 C -478.4004211425781 -18.99990081787109 -477.9999084472656 -18.60029983520508 -477.9999084472656 -18 L -477.9999084472656 -9 C -477.9999084472656 -8.399700164794922 -478.4004211425781 -8.000100135803223 -478.9998168945313 -8.000100135803223 L -480.9996032714844 -8.000100135803223 Z M -486.9999084472656 -8.000100135803223 C -487.6002197265625 -8.000100135803223 -487.9998168945313 -8.399700164794922 -487.9998168945313 -9 L -487.9998168945313 -23.00040054321289 C -487.9998168945313 -23.59980010986328 -487.6002197265625 -24.00030136108398 -486.9999084472656 -24.00030136108398 L -485.0001220703125 -24.00030136108398 C -484.3998107910156 -24.00030136108398 -484.0002136230469 -23.59980010986328 -484.0002136230469 -23.00040054321289 L -484.0002136230469 -9 C -484.0002136230469 -8.399700164794922 -484.3998107910156 -8.000100135803223 -485.0001220703125 -8.000100135803223 L -486.9999084472656 -8.000100135803223 Z M -493.0002136230469 -8.000100135803223 C -493.599609375 -8.000100135803223 -494.0001220703125 -8.399700164794922 -494.0001220703125 -9 L -494.0001220703125 -12.99960041046143 C -494.0001220703125 -13.5999002456665 -493.599609375 -14.00040054321289 -493.0002136230469 -14.00040054321289 L -491.0004272460938 -14.00040054321289 C -490.4001159667969 -14.00040054321289 -489.9996032714844 -13.5999002456665 -489.9996032714844 -12.99960041046143 L -489.9996032714844 -9 C -489.9996032714844 -8.399700164794922 -490.4001159667969 -8.000100135803223 -491.0004272460938 -8.000100135803223 L -493.0002136230469 -8.000100135803223 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div id="Home">
+				<svg class="BG_fx">
+					<rect id="BG_fx" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<div id="Home_fy">
+					<span>Home</span>
+				</div>
+				<div id="icon_home" class="icon_home">
+					<svg class="Path_357" viewBox="0 0 16 16">
+						<path id="Path_357" d="M 15.58104991912842 5.186039924621582 L 8.581049919128418 0.186039924621582 C 8.233389854431152 -0.06201007962226868 7.766599655151367 -0.06201007962226868 7.41894006729126 0.186039924621582 L 0.4189400672912598 5.186039924621582 C -0.03027993440628052 5.507329940795898 -0.1347699165344238 6.131839752197266 0.1865200698375702 6.58105993270874 C 0.506830096244812 7.031260013580322 1.132810115814209 7.133790016174316 1.581050157546997 6.81397008895874 L 2 6.514709949493408 L 2 15 C 2 15.55224990844727 2.447269916534424 16 3 16 L 13 16 C 13.55272960662842 16 14 15.55224990844727 14 15 L 14 6.514709949493408 C 14.34891033172607 6.76393985748291 14.59648036956787 7 14.99901962280273 7 C 15.31151962280273 7 15.61815929412842 6.854489803314209 15.81346988677979 6.581049919128418 C 16.13476943969727 6.131840229034424 16.03026962280273 5.507319927215576 15.58104991912842 5.186039924621582 Z M 12 14 L 10 14 L 10 11 C 10 9.895389556884766 9.104550361633301 9 8 9 C 6.895449638366699 9 6 9.895389556884766 6 11 L 6 14 L 4 14 L 4 5.086120128631592 L 8 2.229000091552734 L 12 5.086120128631592 L 12 14 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Hover">
+				<svg class="BG_f">
+					<rect id="BG_f" rx="0" ry="0" x="0" y="0" width="260" height="53">
+					</rect>
+				</svg>
+				<svg class="Vertical_Line">
+					<rect id="Vertical_Line" rx="0" ry="0" x="0" y="0" width="5" height="53">
+					</rect>
+				</svg>
+			</div>
+		</div>
+		<div id="Logo">
+			<svg class="BG_ga" viewBox="0 0 260 70">
+				<path id="BG_ga" d="M 0 0 L 260 0 L 260 70 L 0 70 L 0 0 Z">
+				</path>
+			</svg>
+			<div id="Logo_f">
+				<span>watercooler</span>
+			</div>
+		</div>
+	</div>
+	<div id="maildetail">
+		<div id="title">
+			<div id="Label">
+				<svg class="LabelBG">
+					<rect id="LabelBG" rx="12" ry="12" x="0" y="0" width="75" height="24">
+					</rect>
+				</svg>
+				<div id="LabelContent">
+					<span>Design</span>
+				</div>
+			</div>
+			<div id="Protective_Preventative_Mainte">
+				<span>Protective Preventative Maintenance</span>
+			</div>
+			<svg class="Path_309_gd" viewBox="2.6 4.6 11 7">
+				<path id="Path_309_gd" d="M 8.09999942779541 11.60000038146973 L 2.599999666213989 6.041176319122314 L 4.02592658996582 4.599999904632568 L 8.09999942779541 8.717647552490234 L 12.17407512664795 4.599999904632568 L 13.59999942779541 6.041176319122314 L 8.09999942779541 11.60000038146973 Z">
+				</path>
+			</svg>
+			<div id="David_James_ge">
+				<span>David James</span>
+			</div>
+			<div id="to_me">
+				<span>to </span><span style="font-style:normal;font-weight:bold;color:rgba(67,66,93,1);">me</span>
+			</div>
+			<div id="Jan_5_2018">
+				<span>Jan 5, 2018</span>
+			</div>
+			<svg class="Path_310_gh" viewBox="1837 5055.342 669.342 1">
+				<path id="Path_310_gh" d="M 1837 5055.34228515625 C 1837 5055.34228515625 2506.34228515625 5055.34228515625 2506.34228515625 5055.34228515625">
+				</path>
+			</svg>
+			<img id="avatar_gi" src="avatar_gi.png" srcset="avatar_gi.png 1x, avatar_gi@2x.png 2x">
+		</div>
+		<div id="Hey_John_I_was_just_seeing_how">
+			<span>Hey John,<br/>I was just seeing how you were doing.  You seemed to feel less confident on the the presentation than<br/> in the past.  Are you okay?<br/>Let me know anyway that I can help.  <br/><br/>Dave</span>
+		</div>
+		<div id="replybox">
+			<svg class="Rectangle_565">
+				<rect id="Rectangle_565" rx="4" ry="4" x="0" y="0" width="600" height="150">
+				</rect>
+			</svg>
+			<div id="Click_here_to_Reply">
+				<span>Click here to</span><span style="color:rgba(77,79,92,1);"> </span><span style="color:rgba(59,134,255,1);text-decoration:underline;">Reply</span>
+			</div>
+		</div>
+	</div>
+	<img id="Image_6" src="Image_6.png" srcset="Image_6.png 1x, Image_6@2x.png 2x">
+	<img id="Image_3" src="Image_3.png" srcset="Image_3.png 1x, Image_3@2x.png 2x">
+</div>
+</body>
+</html>
