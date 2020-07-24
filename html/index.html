@@ -6317,9 +6317,10 @@ window.application = new Application();
 		</div>
 	</div>
 	<!-- TIMER STUFF -->
+
 	<script>
 		function redirect(){
-			window.location.replace('Users/brendan/Desktop/TechPoint_SOS_2020/html/Watercooler.html');
+			window.location.replace('Watercooler.html');
 		}
 
 
@@ -6364,7 +6365,7 @@ window.application = new Application();
 
 				// If the count down is finished, write some text
 				if (distance < 0) {
-					redirect();
+					self.redirect();
 					clearInterval(x);
 					document.getElementById("CountdownTimer").innerHTML = "EXPIRED";
 
