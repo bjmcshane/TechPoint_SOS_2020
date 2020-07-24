@@ -828,9 +828,9 @@
 		height: 100px;
 		left: 429px;
 		top: 600px;
-		background-color: #f44336;
+		/*background-color: #f44336;*/
   	padding: 30px 40px;
-  	color: white;
+  	color: black;
   	text-align: center;
 	}
 
@@ -2703,16 +2703,16 @@
 	}
 	#scroller{
 		position: absolute;
-		width: 100px;
+		width: 140px;
 		height: 50px;
-		left: 840px;
+		left: 825px;
 		top: 160px;
 	}
 	#submit_time{
 		position: absolute;
 		width: 80px;
 		height: 20px;
-		left: 950px;
+		left: 1000px;
 		top: 177px;
 		border: black solid;
 	}
@@ -2914,10 +2914,6 @@ var Application = function() {
 
 		// get document start values immediately
 		self.requestRefreshUpdate();
-	}
-
-	self.noftify = function() {
-		console.log("submitted!");
 	}
 
 	/**
@@ -5111,6 +5107,17 @@ var Application = function() {
 		event.stopImmediatePropagation();
 	}
 
+	//swapping to the watercooler
+	self.goToBreak() = function() {
+		document.location.href = './' +
+	}
+
+
+
+
+
+
+
 	/**
 	 * Cross fade between views
 	 **/
@@ -5780,6 +5787,8 @@ window.application = new Application();
 		}
 
 		// Add a "checked" symbol when clicking on a list item
+
+		/*
 		var list = document.querySelector('ul');
 		list.addEventListener('click', function(ev) {
 			if (ev.target.tagName === 'LI') {
@@ -5787,31 +5796,36 @@ window.application = new Application();
 			}
 		}, false);
 
+		*/
+
+
 		// Create a new list item when clicking on the "Add" button
 		function newElement() {
 			var li = document.createElement("li");
 			var input = document.getElementById("myInput").value;
-			var text = document.createTextNode(input);
-			li.appendChild(text);
 
-			document.getElementById("todo").appendChild(li);
-			document.getElementById("myInput").value = "";
+			if(input){
+				var text = document.createTextNode(input);
+				li.appendChild(text);
 
-			//adds close button to new td item?
-			var span = document.createElement("SPAN");
-			var txt = document.createTextNode("\u00D7");
-			span.className = "close";
-			span.appendChild(txt);
-			li.appendChild(span);
+				document.getElementById("todo").appendChild(li);
+				document.getElementById("myInput").value = "";
 
-			for (i = 0; i < close.length; i++) {
-				close[i].onclick = function() {
-					var div = this.parentElement;
-					div.style.display = "none";
+				//adds close button to new td item?
+				var span = document.createElement("SPAN");
+				var txt = document.createTextNode("\u00D7");
+				span.className = "close";
+				span.appendChild(txt);
+				li.appendChild(span);
+
+				for (i = 0; i < close.length; i++) {
+					close[i].onclick = function() {
+						var div = this.parentElement;
+						div.style.display = "none";
+					}
 				}
 			}
 		}
-
 
 	</script>
 	<div id="todoHeader" class="header">
@@ -6175,6 +6189,7 @@ window.application = new Application();
 					</svg>
 				</div>
 			</div>
+			<!-- CHAT ROOM STUFF-->
 			<div id="Chat_Room">
 				<svg class="BG_fq">
 					<rect id="BG_fq" rx="0" ry="0" x="0" y="0" width="333" height="53">
@@ -6303,7 +6318,12 @@ window.application = new Application();
 	</div>
 	<!-- TIMER STUFF -->
 	<script>
-		function notify() {
+		function redirect(){
+			window.location.replace('Users/brendan/Desktop/TechPoint_SOS_2020/html/Watercooler.html');
+		}
+
+
+		function setTime() {
 			//console.log(typeof document.getElementById('scroller').value); //prints 6:30 for am and 18:30 for pm
 			var time = document.getElementById('scroller').value;
 			var hour = parseInt(time.substring(0,2));
@@ -6344,14 +6364,16 @@ window.application = new Application();
 
 				// If the count down is finished, write some text
 				if (distance < 0) {
+					redirect();
 					clearInterval(x);
 					document.getElementById("CountdownTimer").innerHTML = "EXPIRED";
+
 				}
 			}, 1000);
 		}
 	</script>
-	<input type='time' id='scroller' name='scroller' min='9:00' max='5:00' required/ onsubmit="notify()">
-	<button id='submit_time' onclick="notify()">submit</button>
+	<input type='time' id='scroller' name='scroller' min='9:00' max='5:00' required/>
+	<button id='submit_time' onclick="setTime()">Submit</button>
 	<div id="CountdownTimer">
 	</div>
 	<img id="Image_6" src="../images/Image_6.png" srcset="../images/Image_6.png 1x, ../images/Image_6@2x.png 2x">
