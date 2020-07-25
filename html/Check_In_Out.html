@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		var Dashboard = 'index.html';
+	</script>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -891,6 +894,11 @@ var Application = function() {
 	this.refreshCheckContentSize = false;
 
 	var self = this;
+
+	self.swap = function(page) {
+		window.location.href = page;
+	}
+
 
 	self.initialize = function(event) {
 		var view = self.getVisibleView();

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		var Dashboard = 'index.html';
+	</script>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1482,6 +1485,10 @@ var Application = function() {
 		catch( error ) {
 			//console.log('Caught Exception: ' + error);
 		}
+	}
+
+	self.swap = function(page) {
+		window.location.href = page;
 	}
 
 	self.refreshOnLoadOnceHandler = function(event) {
@@ -4168,7 +4175,7 @@ window.application = new Application();
 					</svg>
 				</div>
 			</div>
-			<div onclick="application.goToTargetView(event)" id="Dashboard">
+			<div onclick="application.swap(Dashboard)" id="Dashboard">
 				<svg class="BG_cj">
 					<rect id="BG_cj" rx="0" ry="0" x="0" y="0" width="333" height="53">
 					</rect>

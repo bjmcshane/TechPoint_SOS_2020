@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		var Dashboard = 'index.html';
+	</script>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2516,6 +2519,11 @@ var Application = function() {
 	this.refreshCheckContentSize = false;
 
 	var self = this;
+
+	self.swap = function(page) {
+		window.location.href = page;
+	}
+
 
 	self.initialize = function(event) {
 		var view = self.getVisibleView();
@@ -5790,7 +5798,7 @@ window.application = new Application();
 					</svg>
 				</div>
 			</div>
-			<div onclick="application.goToTargetView(event)" id="Dashboard">
+			<div onclick="application.swap(Dashboard)" id="Dashboard">
 				<svg class="BG_fv">
 					<rect id="BG_fv" rx="0" ry="0" x="0" y="0" width="260" height="53">
 					</rect>
