@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+	var Watercooler = 'Watercooler.html';
+	var Department = 'Department.html';
+	function redirect(page){
+		window.location.href = page;
+	}
+	</script>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5049,6 +5056,13 @@ var Application = function() {
 	/**
 	 * Go to the view in the event targets CSS variable
 	 */
+	self.swap = function(page) {
+		window.location.href = page;
+	}
+
+
+
+
 	self.goToTargetView = function(event) {
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
@@ -5107,10 +5121,6 @@ var Application = function() {
 		event.stopImmediatePropagation();
 	}
 
-	//swapping to the watercooler
-	self.goToBreak() = function() {
-		document.location.href = './' +
-	}
 
 
 
@@ -6205,7 +6215,7 @@ window.application = new Application();
 					</svg>
 				</div>
 			</div>
-			<div onclick="application.goToTargetView(event)" id="Customers">
+			<div onclick="application.swap(Department)" id="Customers">
 				<svg class="BG_fv">
 					<rect id="BG_fv" rx="0" ry="0" x="0" y="0" width="333" height="53">
 					</rect>
@@ -6220,7 +6230,7 @@ window.application = new Application();
 					</svg>
 				</div>
 			</div>
-			<div onclick="application.goToTargetView(event)" id="Invoices">
+			<div onclick="application.swap(Watercooler)" id="Invoices">
 				<svg class="BG_f">
 					<rect id="BG_f" rx="0" ry="0" x="0" y="0" width="333" height="53">
 					</rect>
@@ -6319,9 +6329,6 @@ window.application = new Application();
 	<!-- TIMER STUFF -->
 
 	<script>
-		function redirect(){
-			window.location.href = 'Watercooler.html';
-		}
 
 
 		function setTime() {
@@ -6365,7 +6372,7 @@ window.application = new Application();
 
 				// If the count down is finished, write some text
 				if (distance < 0) {
-					self.redirect();
+					self.redirect('Watercooler.html');
 					clearInterval(x);
 					document.getElementById("CountdownTimer").innerHTML = "EXPIRED";
 
